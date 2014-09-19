@@ -1,0 +1,415 @@
+Index,Name,Class,Rarity,Type,Race,Mana,Attack,Health,Set,Ability
+1,Abomination,Neutral,Rare,Minion,,5,4,4,Expert,Taunt. Deathrattle: Deal 2 damage to ALL characters.
+2,Abusive Sergeant,Neutral,Common,Minion,,1,2,1,Expert,Battlecry: Give a minion +2 Attack this turn.
+3,Acidic Swamp Ooze,Neutral,Common,Minion,,2,3,2,Basic,Battlecry: Destroy your opponent's weapon.
+4,Acolyte of Pain,Neutral,Common,Minion,,3,1,3,Expert,"Whenever this minion takes damage, draw a card."
+5,Al'Akir the Windlord,Shaman,Legendary,Minion,,8,3,5,Expert,"Windfury, Charge, Divine Shield, Taunt"
+6,Alarm-o-Bot,Neutral,Rare,Minion,,3,0,3,Expert,"At the start of your turn, swap this minion with a random one in your hand."
+7,Aldor Peacekeeper,Paladin,Rare,Minion,,3,3,3,Expert,Battlecry: Change an enemy minion's Attack to 1.
+8,Alexstrasza,Neutral,Legendary,Minion,Dragon,9,8,8,Expert,Battlecry: Set a hero's remaining Health to 15.
+9,Amani Berserker,Neutral,Common,Minion,,2,2,3,Expert,Enrage: +3 Attack
+10,Ancestral Healing,Shaman,Free,Spell,,0,,,Basic,Restore a minion to full Health and give it Taunt.
+11,Ancestral Spirit,Shaman,Rare,Spell,,2,,,Expert,"Choose a minion. When that minion is destroyed, return it to the battlefield."
+12,Ancient Brewmaster,Neutral,Common,Minion,,4,5,4,Expert,Battlecry: Return a friendly minion from the battlefield to your hand.
+13,Ancient Mage,Neutral,Rare,Minion,,4,2,5,Expert,Battlecry: Give adjacent minions Spell Damage +1.
+14,Ancient of Lore,Druid,Epic,Minion,,7,5,5,Expert,Choose One - Draw 2 cards; or Restore 5 Health.
+15,Ancient of War,Druid,Epic,Minion,,7,5,5,Expert,Choose One - +5 Attack; or +5 Health and Taunt.
+16,Ancient Watcher,Neutral,Rare,Minion,,2,4,5,Expert,Can't Attack.
+17,Angry Chicken,Neutral,Rare,Minion,Beast,1,1,1,Expert,Enrage: +5 Attack.
+18,Animal Companion,Hunter,Common,Spell,,3,,,Basic,Summon a random Beast Companion.
+19,Anub'ar Ambusher,Rogue,Common,Minion,,4,5,5,Naxxramus,Deathrattle: Return a random friendly minion to your hand.
+20,Arathi Weaponsmith,Warrior,Common,Minion,,4,3,3,Expert,Battlecry: Equip a 2/2 weapon.
+21,Arcane Explosion,Mage,Free,Spell,,2,,,Basic,Deal 1 damage to all enemy minions.
+22,Arcane Golem,Neutral,Rare,Minion,,3,4,2,Expert,Charge. Battlecry: Give your opponent a Mana Crystal.
+23,Arcane Intellect,Mage,Free,Spell,,3,,,Basic,Draw 2 cards.
+24,Arcane Missiles,Mage,Free,Spell,,1,,,Basic,Deal 3 damage randomly split among enemy characters.
+25,Arcane Shot,Hunter,Free,Spell,,1,,,Basic,Deal 2 damage.
+26,Arcanite Reaper,Warrior,Common,Weapon,,5,5,2,Basic,
+27,Archmage,Neutral,Common,Minion,,6,4,7,Basic,Spell Damage +1
+28,Archmage Antonidas,Mage,Legendary,Minion,,7,5,7,Expert,"Whenever you cast a spell, put a 'Fireball' spell into your hand."
+29,Argent Commander,Neutral,Rare,Minion,,6,4,2,Expert,"Charge, Divine Shield"
+30,Argent Protector,Paladin,Common,Minion,,2,2,2,Expert,Battlecry: Give a friendly minion Divine Shield.
+31,Argent Squire,Neutral,Common,Minion,,1,1,1,Expert,Divine Shield
+32,Armorsmith,Warrior,Rare,Minion,,2,1,4,Expert,"Whenever a friendly minion takes damage, gain 1 Armor."
+33,Assassinate,Rogue,Free,Spell,,5,,,Basic,Destroy an enemy minion.
+34,Assassin's Blade,Rogue,Common,Weapon,,5,3,4,Basic,
+35,Auchenai Soulpriest,Priest,Rare,Minion,,4,3,5,Expert,Your cards and powers that restore Health now deal damage instead.
+36,Avenge,Paladin,Common,Spell,,1,0,0,Naxxramus,Secret: When one of your minions deies give a random friendly minion +3/+2.
+37,Avenging Wrath,Paladin,Epic,Spell,,6,,,Expert,Deal 8 damage randomly split among enemy characters.
+38,Azure Drake,Neutral,Rare,Minion,Dragon,5,4,4,Expert,Spell Damage +1. Battlecry: Draw a card.
+39,Backstab,Rogue,Free,Spell,,0,,,Basic,Deal 2 damage to an undamaged minion.
+40,Bane of Doom,Warlock,Epic,Spell,,5,,,Expert,"Deal 2 damage to a character. If that kills it, summon a random Demon."
+41,Baron Geddon,Neutral,Legendary,Minion,,7,7,5,Expert,"At the end of your turn, deal 2 damage to ALL other characters."
+42,Baron Rivendare,Neutral,Legendary,Minion,,4,1,7,Naxxramus,Your minions trigger their Deathrattles twice.
+43,Battle Rage,Warrior,Common,Spell,,2,,,Expert,Draw a card for each damaged friendly character.
+44,Bestial Wrath,Hunter,Epic,Spell,,1,,,Expert,Give a Beast +2 Attack and Immune this turn.
+45,Betrayal,Rogue,Common,Spell,,2,,,Expert,Force an enemy minion to deal its damage to the minions next to it.
+46,Big Game Hunter,Neutral,Epic,Minion,,3,4,2,Expert,Battlecry: Destroy a minion with an Attack of 7 or more.
+47,Bite,Druid,Rare,Spell,,4,,,Expert,Give your hero +4 Attack this turn and 4 Armor.
+48,Blade Flurry,Rogue,Rare,Spell,,2,,,Expert,Destroy your weapon and deal its damage to all enemies.
+49,Blessed Champion,Paladin,Rare,Spell,,5,,,Expert,Double a minion's Attack.
+50,Blessing of Kings,Paladin,Common,Spell,,4,,,Basic,Give a minion +4/+4. (+4 Attack/+4 Health)
+51,Blessing of Might,Paladin,Free,Spell,,1,,,Basic,Give a minion +3 Attack.
+52,Blessing of Wisdom,Paladin,Common,Spell,,1,,,Expert,"Choose a minion. Whenever it attacks, draw a card."
+53,Blizzard,Mage,Rare,Spell,,6,,,Expert,Deal 2 damage to all enemy minions and Freeze them.
+54,Blood Imp,Warlock,Common,Minion,Demon,1,0,1,Expert,"Stealth. At the end of your turn, give another random friendly minion +1 Health."
+55,Blood Knight,Neutral,Epic,Minion,,3,3,3,Expert,Battlecry: All minions lose Divine Shield. Gain +3/+3 for each Shield lost.
+56,Bloodfen Raptor,Neutral,Free,Minion,Beast,2,3,2,Basic,
+57,Bloodlust,Shaman,Common,Spell,,5,,,Basic,Give your minions +3 Attack this turn.
+58,Bloodmage Thalnos,Neutral,Legendary,Minion,,2,1,1,Expert,Spell Damage +1. Deathrattle: Draw a card.
+59,Bloodsail Corsair,Neutral,Rare,Minion,Pirate,1,1,2,Expert,Battlecry: Remove 1 Durability from your opponent's weapon.
+60,Bloodsail Raider,Neutral,Common,Minion,Pirate,2,2,3,Expert,Battlecry: Gain Attack equal to the Attack of your weapon.
+61,Bluegill Warrior,Neutral,Common,Minion,Murloc,2,2,1,Basic,Charge
+62,Booty Bay Bodyguard,Neutral,Common,Minion,,5,5,4,Basic,Taunt
+63,Boulderfist Ogre,Neutral,Free,Minion,,6,6,7,Basic,
+64,Brawl,Warrior,Epic,Spell,,5,,,Expert,Destroy all minions except one. (chosen randomly)
+65,Cabal Shadow Priest,Priest,Epic,Minion,,6,4,5,Expert,Battlecry: Take control of an enemy minion that has 2 or less Attack.
+66,Cairne Bloodhoof,Neutral,Legendary,Minion,,6,4,5,Expert,Deathrattle: Summon a 4/5 Baine Bloodhoof.
+67,Captain Greenskin,Neutral,Legendary,Minion,Pirate,5,5,4,Expert,Battlecry: Give your weapon +1/+1.
+68,Captain's Parrot,Neutral,Epic,Minion,Beast,2,1,1,Reward,Battlecry: Put a random Pirate from your deck into your hand.
+69,Cenarius,Druid,Legendary,Minion,,9,5,8,Expert,Choose One - Give your other minions +2/+2; or Summon two 2/2 Treants with Taunt.
+70,Charge,Warrior,Free,Spell,,3,,,Basic,Give a friendly minion +2 Attack and Charge.
+71,Chillwind Yeti,Neutral,Common,Minion,,4,4,5,Basic,
+72,Circle of Healing,Priest,Common,Spell,,0,,,Expert,Restore 4 Health to ALL minions.
+73,Claw,Druid,Free,Spell,,1,,,Basic,Give your hero +2 Attack this turn and 2 Armor.
+74,Cleave,Warrior,Common,Spell,,2,,,Basic,Deal 2 damage to two random enemy minions.
+75,Cold Blood,Rogue,Common,Spell,,1,,,Expert,Give a minion +2 Attack. Combo: +4 Attack instead.
+76,Coldlight Oracle,Neutral,Rare,Minion,Murloc,3,2,2,Expert,Battlecry: Each player draws 2 cards.
+77,Coldlight Seer,Neutral,Rare,Minion,Murloc,3,2,3,Expert,Battlecry: Give ALL other Murlocs +2 Health.
+78,Commanding Shout,Warrior,Rare,Spell,,2,,,Expert,Your minions can't be reduced below 1 Health this turn. Draw a card.
+79,Conceal,Rogue,Common,Spell,,1,,,Expert,Give your minions Stealth until your next turn.
+80,Cone of Cold,Mage,Common,Spell,,4,,,Expert,"Freeze a minion and the minions next to it, and deal 1 damage to them."
+81,Consecration,Paladin,Common,Spell,,4,,,Basic,Deal 2 damage to all enemies.
+82,Core Hound,Neutral,Common,Minion,Beast,7,9,5,Basic,
+83,Corruption,Warlock,Common,Spell,,1,,,Basic,"Choose an enemy minion. At the start of your turn, destroy it."
+84,Counterspell,Mage,Rare,Spell,,3,,,Expert,"Secret: When your opponent casts a spell, Counter it."
+85,Crazed Alchemist,Neutral,Rare,Minion,,2,2,2,Expert,Battlecry: Swap the Attack and Health of a minion.
+86,Cruel Taskmaster,Warrior,Common,Minion,,2,2,2,Expert,Battlecry: Deal 1 damage to a minion and give it +2 Attack.
+87,Cult Master,Neutral,Common,Minion,,4,4,2,Expert,"Whenever one of your other minions dies, draw a card."
+88,Dalaran Mage,Neutral,Common,Minion,,3,1,4,Basic,Spell Damage +1
+89,Dancing Swords,Neutral,Common,Minion,,3,4,4,Naxxramus,Deathrattle: Your opponent draws a card.
+90,Dark Cultist,Priest,Common,Minion,,3,3,4,Naxxramus,Deathrattle: Give a random friendly minion +3 Health.
+91,Dark Iron Dwarf,Neutral,Common,Minion,,4,4,4,Expert,Battlecry: Give a minion +2 Attack this turn.
+92,Darkscale Healer,Neutral,Common,Minion,,5,4,5,Basic,Battlecry: Restore 2 Health to all friendly characters.
+93,Deadly Poison,Rogue,Free,Spell,,1,,,Basic,Give your weapon +2 Attack.
+94,Deadly Shot,Hunter,Common,Spell,,3,,,Expert,Destroy a random enemy minion.
+95,Deathlord,Neutral,Rare,Minion,,3,2,8,Naxxramus,Taunt. Deathrattle: Your opponent puts a minion from their deck into the battlefield.
+96,Death's Bite,Warrior,Common,Weapon,,4,4,2,Naxxramus,Deathrattle: Deal 1 damage to all minions.
+97,Deathwing,Neutral,Legendary,Minion,Dragon,10,12,12,Expert,Battlecry: Destroy all other minions and discard your hand.
+98,Defender of Argus,Neutral,Rare,Minion,,4,2,3,Expert,Battlecry: Give adjacent minions +1/+1 and Taunt.
+99,Defias Ringleader,Rogue,Common,Minion,,2,2,2,Expert,Combo: Summon a 2/1 Defias Bandit.
+100,Demolisher,Neutral,Rare,Minion,,3,1,4,Expert,"At the start of your turn, deal 2 damage to a random enemy."
+101,Demonfire,Warlock,Common,Spell,,2,,,Expert,"Deal 2 damage to a minion. If it’s a friendly Demon, give it +2/+2 instead."
+102,Dire Wolf Alpha,Neutral,Common,Minion,Beast,2,2,2,Expert,Adjacent minions have +1 Attack.
+103,Divine Favor,Paladin,Rare,Spell,,3,,,Expert,Draw cards until you have as many in hand as your opponent.
+104,Divine Spirit,Priest,Common,Spell,,2,,,Basic,Double a minion's Health.
+105,Doomguard,Warlock,Epic,Minion,Demon,5,5,7,Expert,Charge. Battlecry: Discard two random cards.
+106,Doomhammer,Shaman,Epic,Weapon,,5,2,8,Expert,"Windfury, Overload: (2)"
+107,Doomsayer,Neutral,,Minion,,2,0,7,Expert,"At the start of your turn, destroy ALL minions."
+108,Dragonling Mechanic,Neutral,Common,Minion,,4,2,4,Basic,Battlecry: Summon a 2/1 Mechanical Dragonling.
+109,Drain Life,Warlock,Free,Spell,,3,,,Basic,Deal 2 damage. Restore 2 Health to your hero.
+110,Dread Corsair,Neutral,Common,Minion,Pirate,4,3,3,Expert,Taunt. Costs (1) less per Attack of your weapon.
+111,Dread Infernal,Warlock,Common,Minion,Demon,6,6,6,Basic,Battlecry: Deal 1 damage to ALL other characters.
+112,Druid of the Claw,Druid,Common,Minion,,5,4,4,Expert,Choose One - Charge; or +2 Health and Taunt.
+113,Duplicate,Mage,Common,Spell,,3,0,0,Naxxramus,Secret: When a friendly minion dies put 2 copies of it into your hand.
+114,Dust Devil,Shaman,Common,Minion,,1,3,1,Expert,Windfury. Overload: (2)
+115,Eaglehorn Bow,Hunter,Rare,Weapon,,3,3,2,Expert,"Whenever a friendly Secret is revealed, gain +1 Durability."
+116,Earth Elemental,Shaman,Epic,Minion,,5,7,8,Expert,Taunt. Overload: (3)
+117,Earth Shock,Shaman,Common,Spell,,1,,,Expert,"Silence a minion, then deal 1 damage to it."
+118,Earthen Ring Farseer,Neutral,Common,Minion,,3,3,3,Expert,Battlecry: Restore 3 Health.
+119,Echoing Ooze,Neutral,Epic,Minion,,2,1,2,Naxxramus,Battlecry: Summon an exact copy of this minion at the end of the turn.
+120,Edwin VanCleef,Rogue,Legendary,Minion,,3,2,2,Expert,Combo: Gain +2/+2 for each card played earlier this turn.
+121,Elite Tauren Chieftain,Neutral,Legendary,Minion,,5,5,5,Promotion,Battlecry: Give both players the power to ROCK! (with a Power Chord card)
+122,Elven Archer,Neutral,Common,Minion,,1,1,1,Basic,Battlecry: Deal 1 damage.
+123,Emperor Cobra,Neutral,Rare,Minion,Beast,3,2,3,Expert,Destroy any minion damaged by this minion.
+124,Equality,Paladin,Rare,Spell,,2,,,Expert,Change the Health of ALL minions to 1.
+125,Ethereal Arcanist,Mage,Rare,Minion,,4,3,3,Expert,"If you control a Secret at the end of your turn, gain +2/+2."
+126,Eviscerate,Rogue,Common,Spell,,2,,,Expert,Deal 2 damage. Combo: Deal 4 damage instead.
+127,Execute,Warrior,Free,Spell,,1,,,Basic,Destroy a damaged enemy minion.
+128,Explosive Shot,Hunter,Rare,Spell,,5,,,Expert,Deal 5 damage to a minion and 2 damage to adjacent ones.
+129,Explosive Trap,Hunter,Common,Spell,,2,,,Expert,"Secret: When your hero is attacked, deal 2 damage to all enemies."
+130,Eye for an Eye,Paladin,Common,Spell,,1,,,Expert,"Secret: When your hero takes damage, deal that much damage to the enemy hero."
+131,Faceless Manipulator,Neutral,Epic,Minion,,5,3,3,Expert,Battlecry: Choose a minion and become a copy of it.
+132,Faerie Dragon,Neutral,Common,Minion,Dragon,2,3,2,Expert,Can't be targeted by Spells or Hero Powers.
+133,Fan of Knives,Rogue,Common,Spell,,3,,,Basic,Deal 1 damage to all enemy minions. Draw a card.
+134,Far Sight,Shaman,Epic,Spell,,3,,,Expert,Draw a card. That card costs (3) less.
+135,Felguard,Warlock,Rare,Minion,Demon,3,3,5,Expert,Taunt. Battlecry: Destroy one of your Mana Crystals.
+136,Fen Creeper,Neutral,Common,Minion,,5,3,6,Expert,Taunt
+137,Feral Spirit,Shaman,Rare,Spell,,3,,,Expert,Summon two 2/3 Spirit Wolves with Taunt. Overload: (2)
+138,Feugen,Neutral,Legendary,Minion,,5,4,7,Naxxramus,Deathrattle: If Stalagg also died this game summon Thaddius.
+139,Fiery War Axe,Warrior,Free,Weapon,,2,3,2,Basic,
+140,Fire Elemental,Shaman,Common,Minion,,6,6,5,Basic,Battlecry: Deal 3 damage.
+141,Fireball,Mage,Free,Spell,,4,,,Basic,Deal 6 damage.
+142,Flame Imp,Warlock,Common,Minion,Demon,1,3,2,Expert,Battlecry: Deal 3 damage to your hero.
+143,Flamestrike,Mage,Common,Spell,,7,,,Basic,Deal 4 damage to all enemy minions.
+144,Flametongue Totem,Shaman,Common,Minion,Totem,2,0,3,Basic,Adjacent minions have +2 Attack.
+145,Flare,Hunter,Rare,Spell,,1,,,Expert,All minions lose Stealth. Destroy all enemy Secrets. Draw a card.
+146,Flesheating Ghoul,Neutral,Common,Minion,,3,2,3,Expert,"Whenever a minion dies, gain +1 Attack."
+147,Force of Nature,Druid,Epic,Spell,,6,,,Expert,Summon three 2/2 Treants with Charge that die at the end of the turn.
+148,Forked Lightning,Shaman,Common,Spell,,1,,,Expert,Deal 2 damage to 2 random enemy minions. Overload: (2)
+149,Freezing Trap,Hunter,Common,Spell,,2,,,Expert,"Secret: When an enemy minion attacks, return it to its owner's hand and it costs (2) more."
+150,Frost Elemental,Neutral,Common,Minion,,6,5,5,Expert,Battlecry: Freeze a character.
+151,Frost Nova,Mage,Common,Spell,,3,,,Basic,Freeze all enemy minions.
+152,Frost Shock,Shaman,Free,Spell,,1,,,Basic,Deal 1 damage to an enemy character and Freeze it.
+153,Frostbolt,Mage,Common,Spell,,2,,,Basic,Deal 3 damage to a character and Freeze it.
+154,Frostwolf Grunt,Neutral,Common,Minion,,2,2,2,Basic,Taunt
+155,Frostwolf Warlord,Neutral,Common,Minion,,5,4,4,Basic,Battlecry: Gain +1/+1 for each other friendly minion on the battlefield.
+156,Frothing Berserker,Warrior,Rare,Minion,,3,2,4,Expert,"Whenever a minion takes damage, gain +1 Attack."
+157,Gadgetzan Auctioneer,Neutral,Rare,Minion,,5,4,4,Expert,"Whenever you cast a spell, draw a card."
+158,Gelbin Mekkatorque,Neutral,Legendary,Minion,,6,6,6,Promotion,Battlecry: Summon an AWESOME invention.
+159,Gladiator's Longbow,Hunter,Epic,Weapon,,7,5,2,Expert,Your hero is Immune while attacking.
+160,Gnomish Inventor,Neutral,Common,Minion,,4,2,4,Basic,Battlecry: Draw a card.
+161,Goldshire Footman,Neutral,Common,Minion,,1,1,2,Basic,Taunt
+162,Gorehowl,Warrior,Epic,Weapon,,7,7,1,Expert,Attacking a minion costs 1 Attack instead of 1 Durability.
+163,Grimscale Oracle,Neutral,Common,Minion,Murloc,1,1,1,Basic,ALL other Murlocs have +1 Attack.
+164,Grommash Hellscream,Warrior,Legendary,Minion,,8,4,9,Expert,Charge. Enrage: +6 Attack
+165,Gruul,Neutral,Legendary,Minion,,8,7,7,Expert,"At the end of each turn, gain +1/+1 ."
+166,Guardian of Kings,Paladin,Common,Minion,,7,5,6,Basic,Battlecry: Restore 6 Health to your hero.
+167,Gurubashi Berserker,Neutral,Common,Minion,,5,2,7,Basic,"Whenever this minion takes damage, gain +3 Attack."
+168,Hammer of Wrath,Paladin,Free,Spell,,4,,,Basic,Deal 3 damage. Draw a card.
+169,Hand of Protection,Paladin,Free,Spell,,1,,,Basic,Give a minion Divine Shield.
+170,Harrison Jones,Neutral,Legendary,Minion,,5,5,4,Expert,Battlecry: Destroy your opponent's weapon and draw cards equal to its Durability.
+171,Harvest Golem,Neutral,Common,Minion,,3,2,3,Expert,Deathrattle: Summon a 2/1 Damaged Golem.
+172,Haunted Creeper,Neutral,Common,Minion,Beast,2,1,2,Naxxramus,Deathrattle: Summon two 1/1 Spectral Spiders.
+173,Headcrack,Rogue,Rare,Spell,,3,,,Expert,Deal 2 damage to the enemy hero. Combo: Return this to your hand next turn.
+174,Healing Touch,Druid,Free,Spell,,3,,,Basic,Restore 8 Health.
+175,Hellfire,Warlock,Free,Spell,,4,,,Basic,Deal 3 damage to ALL characters.
+176,Heroic Strike,Warrior,Free,Spell,,2,,,Basic,Give your hero +4 Attack this turn.
+177,Hex,Shaman,Free,Spell,,3,,,Basic,Transform a minion into a 0/1 Frog with Taunt.
+178,Hogger,Neutral,Legendary,Minion,,6,4,4,Expert,"At the end of your turn, summon a 2/2 Gnoll with Taunt."
+179,Holy Fire,Priest,Rare,Spell,,6,,,Expert,Deal 5 damage. Restore 5 Health to your hero.
+180,Holy Light,Paladin,Free,Spell,,2,,,Basic,Restore 6 Health.
+181,Holy Nova,Priest,Common,Spell,,5,,,Basic,Deal 2 damage to all enemies. Restore 2 Health to all friendly characters.
+182,Holy Smite,Priest,Free,Spell,,1,,,Basic,Deal 2 damage.
+183,Holy Wrath,Paladin,Rare,Spell,,5,,,Expert,Draw a card and deal damage equal to its cost.
+184,Houndmaster,Hunter,Free,Minion,,4,4,3,Basic,Battlecry: Give a friendly Beast +2/+2 and Taunt.
+185,Humility,Paladin,Common,Spell,,1,,,Basic,Change a minion's Attack to 1.
+186,Hungry Crab,Neutral,Epic,Minion,Beast,1,1,2,Expert,Battlecry: Destroy a Murloc and gain +2/+2.
+187,Hunter's Mark,Hunter,Common,Spell,,0,,,Basic,Change a minion's Health to 1.
+188,Ice Barrier,Mage,Common,Spell,,3,,,Expert,"Secret: As soon as your hero is attacked, gain 8 Armor."
+189,Ice Block,Mage,Epic,Spell,,3,,,Expert,"Secret: When your hero takes fatal damage, prevent it and become Immune this turn."
+190,Ice Lance,Mage,Common,Spell,,1,,,Expert,"Freeze a character. If it was already Frozen, deal 4 damage instead."
+191,Illidan Stormrage,Neutral,Legendary,Minion,Demon,6,7,5,Expert,"Whenever you play a card, summon a 2/1 Flame of Azzinoth."
+192,Imp Master,Neutral,Rare,Minion,,3,1,5,Expert,"At the end of your turn, deal 1 damage to this minion and summon a 1/1 Imp."
+193,Injured Blademaster,Neutral,Rare,Minion,,3,4,7,Expert,Battlecry: Deal 4 damage to HIMSELF.
+194,Inner Fire,Priest,Common,Spell,,1,,,Expert,Change a minion's Attack to be equal to its Health.
+195,Inner Rage,Warrior,Common,Spell,,0,,,Expert,Deal 1 damage to a minion and give it +2 Attack.
+196,Innervate,Druid,Free,Spell,,0,,,Basic,Gain 2 Mana Crystals this turn only.
+197,Ironbark Protector,Druid,Common,Minion,,8,8,8,Basic,Taunt
+198,Ironbeak Owl,Neutral,Common,Minion,Beast,2,2,1,Expert,Battlecry: Silence a minion.
+199,Ironforge Rifleman,Neutral,Common,Minion,,3,2,2,Basic,Battlecry: Deal 1 damage.
+200,Ironfur Grizzly,Neutral,Common,Minion,Beast,3,3,3,Basic,Taunt
+201,Jungle Panther,Neutral,Common,Minion,Beast,3,4,2,Expert,Stealth
+202,Keeper of the Grove,Druid,Rare,Minion,,4,2,4,Expert,Choose One - Deal 2 damage; or Silence a minion.
+203,Kel'Thuzad,Neutral,Legendary,Minion,,8,6,8,Naxxramus,At the end of each turn summon all friendly minions that died this turn.
+204,Kidnapper,Rogue,Epic,Minion,,6,5,3,Expert,Combo: Return a minion to its owner's hand.
+205,Kill Command,Hunter,Common,Spell,,3,,,Basic,"Deal 3 damage. If you have a Beast, deal 5 damage instead."
+206,King Krush,Hunter,Legendary,Minion,Beast,9,8,8,Expert,Charge
+207,King Mukla,Neutral,Legendary,Minion,Beast,3,5,5,Expert,Battlecry: Give your opponent 2 Bananas.
+208,Kirin Tor Mage,Mage,Rare,Minion,,3,4,3,Expert,Battlecry: The next Secret you play this turn costs (0).
+209,Knife Juggler,Neutral,Rare,Minion,,2,3,2,Expert,"After you summon a minion, deal 1 damage to a random enemy."
+210,Kobold Geomancer,Neutral,Common,Minion,,2,2,2,Basic,Spell Damage +1
+211,Kor'kron Elite,Warrior,Common,Minion,,4,4,3,Basic,Charge
+212,Lava Burst,Shaman,Rare,Spell,,3,,,Expert,Deal 5 damage. Overload: (2)
+213,Lay on Hands,Paladin,Epic,Spell,,8,,,Expert,Restore 8 Health. Draw 3 cards.
+214,Leeroy Jenkins,Neutral,Legendary,Minion,,4,6,2,Expert,Charge. Battlecry: Summon two 1/1 Whelps for your opponent.
+215,Leper Gnome,Neutral,Common,Minion,,1,2,1,Expert,Deathrattle: Deal 2 damage to the enemy hero.
+216,Lightning Bolt,Shaman,Common,Spell,,1,,,Expert,Deal 3 damage. Overload: (1)
+217,Lightning Storm,Shaman,Rare,Spell,,3,,,Expert,Deal 2-3 damage to all enemy minions. Overload: (2)
+218,Light's Justice,Paladin,Free,Weapon,,1,1,4,Basic,
+219,Lightspawn,Priest,Common,Minion,,4,0,5,Expert,This minion's Attack is always equal to its Health.
+220,Lightwarden,Neutral,Rare,Minion,,1,1,2,Expert,"Whenever a character is healed, gain +2 Attack."
+221,Lightwell,Priest,Rare,Minion,,2,0,5,Expert,"At the start of your turn, restore 3 Health to a damaged friendly character."
+222,Loatheb,Neutral,Legendary,Minion,,5,5,5,Naxxramus,Battlecry: Enemy spells cost (5) more next turn.
+223,Loot Hoarder,Neutral,Common,Minion,,2,2,1,Expert,Deathrattle: Draw a card.
+224,Lord Jaraxxus,Warlock,Legendary,Minion,Demon,9,3,15,Expert,Battlecry: Destroy your hero and replace him with Lord Jaraxxus.
+225,Lord of the Arena,Neutral,Common,Minion,,6,6,5,Basic,Taunt
+226,Lorewalker Cho,Neutral,Legendary,Minion,,2,0,4,Expert,"Whenever a player casts a spell, put a copy into the other player’s hand."
+227,Mad Bomber,Neutral,Common,Minion,,2,3,2,Expert,Battlecry: Deal 3 damage randomly split between all other characters.
+228,Mad Scientist,Neutral,Common,Minion,,2,2,2,Naxxramus,Deathrattle: Put a Secret from your deck into the battlefield.
+229,Magma Rager,Neutral,Free,Minion,,3,5,1,Basic,
+230,Malygos,Neutral,Legendary,Minion,Dragon,9,4,12,Expert,Spell Damage +5
+231,Mana Addict,Neutral,Rare,Minion,,2,1,3,Expert,"Whenever you cast a spell, gain +2 Attack this turn."
+232,Mana Tide Totem,Shaman,Rare,Minion,Totem,3,0,3,Expert,"At the end of your turn, draw a card."
+233,Mana Wraith,Neutral,Rare,Minion,,2,2,2,Expert,ALL minions cost (1) more.
+234,Mana Wyrm,Mage,Common,Minion,,1,1,3,Expert,"Whenever you cast a spell, gain +1 Attack."
+235,Mark of Nature,Druid,Common,Spell,,3,,,Expert,Choose One - Give a minion +4 Attack; or +4 Health and Taunt.
+236,Mark of the Wild,Druid,Free,Spell,,2,,,Basic,Give a minion Taunt and +2/+2. (+2 Attack/+2 Health)
+237,Mass Dispel,Priest,Rare,Spell,,4,,,Expert,Silence all enemy minions. Draw a card.
+238,Master of Disguise,Rogue,Rare,Minion,,4,4,4,Expert,Battlecry: Give a friendly minion Stealth.
+239,Master Swordsmith,Neutral,Rare,Minion,,2,1,3,Expert,"At the end of your turn, give another random friendly minion +1 Attack."
+240,Millhouse Manastorm,Neutral,Legendary,Minion,,2,4,4,Expert,Battlecry: Enemy spells cost (0) next turn.
+241,Mind Blast,Priest,Free,Spell,,2,,,Basic,Deal 5 damage to the enemy hero.
+242,Mind Control,Priest,Common,Spell,,10,,,Basic,Take control of an enemy minion.
+243,Mind Control Tech,Neutral,Rare,Minion,,3,3,3,Expert,"Battlecry: If your opponent has 4 or more minions, take control of one at random."
+244,Mind Vision,Priest,Common,Spell,,1,,,Basic,Put a copy of a random card in your opponent's hand into your hand.
+245,Mindgames,Priest,Epic,Spell,,4,,,Expert,Put a copy of a random minion from your opponent's deck into the battlefield.
+246,Mirror Entity,Mage,Common,Spell,,3,,,Expert,"Secret: When your opponent plays a minion, summon a copy of it."
+247,Mirror Image,Mage,Common,Spell,,1,,,Basic,Summon two 0/2 minions with Taunt.
+248,Misdirection,Hunter,Rare,Spell,,2,,,Expert,"Secret: When a character attacks your hero, instead he attacks another random character."
+249,Mogu'shan Warden,Neutral,Common,Minion,,4,1,7,Expert,Taunt
+250,Molten Giant,Neutral,Legendary,Minion,,20,8,8,Expert,Costs (1) less for each damage your hero has taken.
+251,Moonfire,Druid,Common,Spell,,0,,,Basic,Deal 1 damage.
+252,Mortal Coil,Warlock,Common,Spell,,1,,,Basic,"Deal 1 damage to a minion. If that kills it, draw a card."
+253,Mortal Strike,Warrior,Rare,Spell,,4,,,Expert,"Deal 4 damage. If you have 12 or less Health, deal 6 instead."
+254,Mountain Giant,Neutral,Legendary,Minion,,12,8,8,Expert,Costs (1) less for each other card in your hand.
+255,Mr. Bigglesworth,Neutral,Legendary,Minion,Beast,0,1,1,Naxxramus,
+256,Multi-Shot,Hunter,Free,Spell,,4,,,Basic,Deal 3 damage to two random enemy minions.
+257,Murloc Raider,Neutral,Free,Minion,Murloc,1,2,1,Basic,
+258,Murloc Tidecaller,Neutral,Rare,Minion,Murloc,1,1,2,Expert,"Whenever a Murloc is summoned, gain +1 Attack."
+259,Murloc Tidehunter,Neutral,Common,Minion,Murloc,2,2,1,Basic,Battlecry: Summon a 1/1 Murloc Scout.
+260,Murloc Warleader,Neutral,Epic,Minion,Murloc,3,3,3,Expert,ALL other Murlocs have +2/+1.
+261,Nat Pagle,Neutral,Legendary,Minion,,2,0,4,Expert,"At the start of your turn, you have a 50% chance to draw an extra card."
+262,Naturalize,Druid,Common,Spell,,1,,,Expert,Destroy a minion. Your opponent draws 2 cards.
+263,Nerub'ar Weblord,Neutral,Common,Minion,,2,1,4,Naxxramus,Minions with Battlecry cost (2) more.
+264,Nerubian,Neutral,Rare,Minion,,3,4,4,Naxxramus,
+265,Nerubian Egg,Neutral,Rare,Minion,,2,0,2,Naxxramus,Deathrattle: Summon a 4/4 Nerubian.
+266,Nightblade,Neutral,Free,Minion,,5,4,4,Basic,Battlecry: Deal 3 damage to the enemy hero.
+267,Noble Sacrifice,Paladin,Common,Spell,,1,,,Expert,"Secret: When an enemy attacks, summon a 2/1 Defender as the new target."
+268,Northshire Cleric,Priest,Free,Minion,,1,1,3,Basic,"Whenever a minion is healed, draw a card."
+269,Nourish,Druid,Rare,Spell,,5,,,Expert,Choose One - Gain 2 Mana Crystals; or Draw 3 cards.
+270,Novice Engineer,Neutral,Free,Minion,,2,1,1,Basic,Battlecry: Draw a card.
+271,Nozdormu,Neutral,Legendary,Minion,Dragon,9,8,8,Expert,Players only have 15 seconds to take their turns.
+272,Oasis Snapjaw,Neutral,Free,Minion,Beast,4,2,7,Basic,
+273,Ogre Magi,Neutral,Common,Minion,,4,4,4,Basic,Spell Damage +1
+274,Old Murk-Eye,Neutral,Legendary,Minion,Murloc,4,2,4,Reward,Charge. Has +1 Attack for each other Murloc on the battlefield.
+275,Onyxia,Neutral,Legendary,Minion,Dragon,9,8,8,Expert,Battlecry: Summon 1/1 Whelps until your side of the battlefield is full.
+276,Patient Assassin,Rogue,Epic,Minion,,2,1,1,Expert,Stealth. Destroy any minion damaged by this minion.
+277,Perdition's Blade,Rogue,Rare,Weapon,,3,2,2,Expert,Battlecry: Deal 1 damage. Combo: Deal 2 instead.
+278,Pint-Sized Summoner,Neutral,Rare,Minion,,2,2,2,Expert,The first minion you play each turn costs (1) less.
+279,Pit Lord,Warlock,Epic,Minion,Demon,4,5,6,Expert,Battlecry: Deal 5 damage to your hero.
+280,Poison Seeds,Druid,Common,Spell,,4,0,0,Naxxramus,Destroy all minions and summon 2/2 Treants to replace them.
+281,Polymorph,Mage,Free,Spell,,4,,,Basic,Transform a minion into a 1/1 Sheep.
+282,Power of the Wild,Druid,Common,Spell,,2,,,Expert,Choose One - Give your minions +1/+1; or Summon a 3/2 Panther.
+283,Power Overwhelming,Warlock,Common,Spell,,1,,,Expert,"Give a friendly minion +4/+4 until end of turn. Then, it dies. Horribly."
+284,Power Word: Shield,Priest,Free,Spell,,1,,,Basic,Give a minion +2 Health. Draw a card.
+285,Preparation,Rogue,Epic,Spell,,0,,,Expert,The next spell you cast this turn costs (3) less.
+286,Priestess of Elune,Neutral,Common,Minion,,6,5,4,Expert,Battlecry: Restore 4 Health to your hero.
+287,Prophet Velen,Priest,Legendary,Minion,,7,7,7,Expert,Double the damage and healing of your spells and Hero Power.
+288,Pyroblast,Mage,Epic,Spell,,10,,,Expert,Deal 10 damage.
+289,Questing Adventurer,Neutral,Rare,Minion,,3,2,2,Expert,"Whenever you play a card, gain +1/+1."
+290,Raging Worgen,Neutral,Common,Minion,,3,3,3,Expert,Enrage: Windfury and +1 Attack
+291,Ragnaros the Firelord,Neutral,Legendary,Minion,,8,8,8,Expert,"Can't Attack. At the end of your turn, deal 8 damage to a random enemy."
+292,Raid Leader,Neutral,Free,Minion,,3,2,2,Basic,Your other minions have +1 Attack.
+293,Rampage,Warrior,Common,Spell,,2,,,Expert,Give a damaged minion +3/+3.
+294,Ravenholdt Assassin,Neutral,Rare,Minion,,7,7,5,Expert,Stealth
+295,Razorfen Hunter,Neutral,Common,Minion,,3,2,3,Basic,Battlecry: Summon a 1/1 Boar.
+296,Reckless Rocketeer,Neutral,Free,Minion,,6,5,2,Basic,Charge
+297,Redemption,Paladin,Common,Spell,,1,,,Expert,"Secret: When one of your minions dies, return it to life with 1 Health."
+298,Reincarnate,Shaman,Common,Spell,,2,0,0,Naxxramus,Destroy a minion then return it to life with full Health.
+299,Repentance,Paladin,Common,Spell,,1,,,Expert,"Secret: When your opponent plays a minion, reduce its Health to 1."
+300,River Crocolisk,Neutral,Free,Minion,Beast,2,2,3,Basic,
+301,Rockbiter Weapon,Shaman,Free,Spell,,1,,,Basic,Give a friendly character +3 Attack this turn.
+302,Sacrificial Pact,Warlock,Common,Spell,,0,,,Basic,Destroy a Demon. Restore 5 Health to your hero.
+303,Sap,Rogue,Free,Spell,,2,,,Basic,Return an enemy minion to your opponent's hand.
+304,Savage Roar,Druid,Common,Spell,,3,,,Basic,Give your characters +2 Attack this turn.
+305,Savagery,Druid,Rare,Spell,,1,,,Expert,Deal damage equal to your hero's Attack to a minion.
+306,Savannah Highmane,Hunter,Rare,Minion,Beast,6,6,5,Expert,Deathrattle: Summon two 2/2 Hyenas.
+307,Scarlet Crusader,Neutral,Common,Minion,,3,3,1,Expert,Divine Shield
+308,Scavenging Hyena,Hunter,Common,Minion,Beast,2,2,2,Expert,"Whenever a friendly Beast dies, gain +2/+1."
+309,Sea Giant,Neutral,Epic,Minion,,10,8,8,Expert,Costs (1) less for each other minion on the battlefield.
+310,Secretkeeper,Neutral,Rare,Minion,,1,1,2,Expert,"Whenever a Secret is played, gain +1/+1."
+311,Sen'jin Shieldmasta,Neutral,Free,Minion,,4,3,5,Basic,Taunt
+312,Sense Demons,Warlock,Common,Spell,,3,,,Expert,Put 2 random Demons from your deck into your hand.
+313,Shade of Naxxramas,Neutral,Epic,Minion,,3,2,2,Naxxramus,Stealth. At the start of your turn gain +1/+1.
+314,Shadow Bolt,Warlock,Free,Spell,,3,,,Basic,Deal 4 damage to a minion.
+315,Shadow Madness,Priest,Rare,Spell,,4,,,Expert,Gain control of an enemy minion with 3 or less Attack until end of turn.
+316,Shadow Word: Death,Priest,Common,Spell,,3,,,Basic,Destroy a minion with an Attack of 5 or more.
+317,Shadow Word: Pain,Priest,Free,Spell,,2,,,Basic,Destroy a minion with 3 or less Attack.
+318,Shadowflame,Warlock,Rare,Spell,,4,,,Expert,Destroy a friendly minion and deal its Attack damage to all enemy minions.
+319,Shadowform,Priest,Epic,Spell,,3,,,Expert,Your Hero Power becomes 'Deal 2 damage'. If already in Shadowform: 3 damage.
+320,Shadowstep,Rogue,Common,Spell,,0,,,Expert,Return a friendly minion to your hand. It costs (2) less.
+321,Shattered Sun Cleric,Neutral,Common,Minion,,3,3,2,Basic,Battlecry: Give a friendly minion +1/+1.
+322,Shield Block,Warrior,Common,Spell,,3,,,Basic,Gain 5 Armor. Draw a card.
+323,Shield Slam,Warrior,Epic,Spell,,1,,,Expert,Deal 1 damage to a minion for each Armor you have.
+324,Shieldbearer,Neutral,Common,Minion,,1,0,4,Expert,Taunt
+325,Shiv,Rogue,Common,Spell,,2,,,Basic,Deal 1 damage. Draw a card.
+326,SI:7 Agent,Rogue,Rare,Minion,,3,3,3,Expert,Combo: Deal 2 damage.
+327,Silence,Priest,Common,Spell,,0,,,Expert,Silence a minion.
+328,Silver Hand Knight,Neutral,Common,Minion,,5,4,4,Expert,Battlecry: Summon a 2/2 Squire.
+329,Silverback Patriarch,Neutral,Common,Minion,Beast,3,1,4,Basic,Taunt
+330,Silvermoon Guardian,Neutral,Common,Minion,,4,3,3,Expert,Divine Shield
+331,Sinister Strike,Rogue,Free,Spell,,1,,,Basic,Deal 3 damage to the enemy hero.
+332,Siphon Soul,Warlock,Rare,Spell,,6,,,Expert,Destroy a minion. Restore 3 Health to your hero.
+333,Slam,Warrior,Common,Spell,,2,,,Expert,"Deal 2 damage to a minion. If it survives, draw a card."
+334,Sludge Belcher,Neutral,Rare,Minion,,5,3,5,Naxxramus,Taunt.  Deathrattle: Summon a 1/2 Slime with Taunt.
+335,Snake Trap,Hunter,Epic,Spell,,2,,,Expert,"Secret: When one of your minions is attacked, summon three 1/1 Snakes."
+336,Snipe,Hunter,Common,Spell,,2,,,Expert,"Secret: When your opponent plays a minion, deal 4 damage to it."
+337,Sorcerer's Apprentice,Mage,Common,Minion,,2,3,2,Expert,Your spells cost (1) less.
+338,Soul of the Forest,Druid,Common,Spell,,4,,,Expert,"Give your minions ""Deathrattle: Summon a 2/2 Treant."""
+339,Soulfire,Warlock,Common,Spell,,0,,,Basic,Deal 4 damage. Discard a random card.
+340,Southsea Captain,Neutral,Epic,Minion,Pirate,3,3,3,Expert,Your other Pirates have +1/+1.
+341,Southsea Deckhand,Neutral,Common,Minion,Pirate,1,2,1,Expert,Has Charge while you have a weapon equipped.
+342,Spectral Knight,Neutral,Common,Minion,,5,4,6,Naxxramus,Can't be targeted by spells or Hero Powers.
+343,Spellbender,Mage,Epic,Spell,,3,,,Expert,"Secret: When an enemy casts a spell on a minion, summon a 1/3 as the new target."
+344,Spellbreaker,Neutral,Common,Minion,,4,4,3,Expert,Battlecry: Silence a minion.
+345,Spiteful Smith,Neutral,Common,Minion,,5,4,6,Expert,Enrage: Your weapon has +2 Attack.
+346,Sprint,Rogue,Common,Spell,,7,,,Basic,Draw 4 cards.
+347,Stalagg,Neutral,Legendary,Minion,,5,7,4,Naxxramus,Deathrattle: If Feugen also died this game summon Thaddius.
+348,Stampeding Kodo,Neutral,Rare,Minion,Beast,5,3,5,Expert,Battlecry: Destroy a random enemy minion with 2 or less Attack.
+349,Starfall,Druid,Rare,Spell,,5,,,Expert,Choose One - Deal 5 damage to a minion; or 2 damage to all enemy minions.
+350,Starfire,Druid,Common,Spell,,6,,,Basic,Deal 5 damage. Draw a card.
+351,Starving Buzzard,Hunter,Common,Minion,Beast,2,2,1,Basic,"Whenever you summon a Beast, draw a card."
+352,Stoneskin Gargoyle,Neutral,Common,Minion,,3,1,4,Naxxramus,At the start of your turn restore this minion to full Health.
+353,Stonetusk Boar,Neutral,Free,Minion,Beast,1,1,1,Basic,Charge
+354,Stormforged Axe,Shaman,Common,Weapon,,2,2,3,Expert,Overload: (1)
+355,Stormpike Commando,Neutral,Common,Minion,,5,4,2,Basic,Battlecry: Deal 2 damage.
+356,Stormwind Champion,Neutral,Common,Minion,,7,6,6,Basic,Your other minions have +1/+1.
+357,Stormwind Knight,Neutral,Common,Minion,,4,2,5,Basic,Charge
+358,Stranglethorn Tiger,Neutral,Common,Minion,Beast,5,5,5,Expert,Stealth
+359,Succubus,Warlock,Free,Minion,Demon,2,4,3,Basic,Battlecry: Discard a random card.
+360,Summoning Portal,Warlock,Common,Minion,,4,0,4,Expert,"Your minions cost (2) less, but not less than (1)."
+361,Sunfury Protector,Neutral,Rare,Minion,,2,2,3,Expert,Battlecry: Give adjacent minions Taunt.
+362,Sunwalker,Neutral,Rare,Minion,,6,4,5,Expert,Taunt. Divine Shield
+363,Swipe,Druid,Common,Spell,,4,,,Basic,Deal 4 damage to an enemy and 1 damage to all other enemies.
+364,Sword of Justice,Paladin,Epic,Weapon,,3,1,5,Expert,"Whenever you summon a minion, give it +1/+1 and this loses 1 Durability."
+365,Sylvanas Windrunner,Neutral,Legendary,Minion,,6,5,5,Expert,Deathrattle: Take control of a random enemy minion.
+366,Tauren Warrior,Neutral,Common,Minion,,3,2,3,Expert,Taunt. Enrage: +3 Attack
+367,Temple Enforcer,Priest,Common,Minion,,6,6,6,Expert,Battlecry: Give a friendly minion +3 Health.
+368,Thaddius,Neutral,Legendary,Minion,,10,11,11,Naxxramus,
+369,The Beast,Neutral,Legendary,Minion,Beast,6,9,7,Expert,Deathrattle: Summon a 3/3 Finkle Einhorn for your opponent.
+370,The Black Knight,Neutral,Legendary,Minion,,6,4,5,Expert,Battlecry: Destroy an enemy minion with Taunt.
+371,Thoughtsteal,Priest,Common,Spell,,3,,,Expert,Copy 2 cards from your opponent's deck and put them into your hand.
+372,Thrallmar Farseer,Neutral,Common,Minion,,3,2,3,Expert,Windfury
+373,Timber Wolf,Hunter,Free,Minion,Beast,1,1,1,Basic,Your other Beasts have +1 Attack.
+374,Tinkmaster Overspark,Neutral,Legendary,Minion,,3,3,3,Expert,Battlecry: Transform another random minion into a 5/5 Devilsaur or a 1/1 Squirrel.
+375,Tirion Fordring,Paladin,Legendary,Minion,,8,6,6,Expert,Divine Shield. Taunt. Deathrattle: Equip a 5/3 Ashbringer.
+376,Totemic Might,Shaman,Common,Spell,,0,,,Basic,Give your Totems +2 Health.
+377,Tracking,Hunter,Free,Spell,,1,,,Basic,Look at the top three cards of your deck. Draw one and discard the others.
+378,Truesilver Champion,Paladin,Common,Weapon,,4,4,2,Basic,"Whenever your hero attacks, restore 2 Health to it."
+379,Tundra Rhino,Hunter,Common,Minion,Beast,5,2,5,Basic,Your Beasts have Charge.
+380,Twilight Drake,Neutral,Rare,Minion,Dragon,4,4,1,Expert,Battlecry: Gain +1 Health for each card in your hand.
+381,Twisting Nether,Warlock,Epic,Spell,,8,,,Expert,Destroy all minions.
+382,Unbound Elemental,Shaman,Common,Minion,,3,2,4,Expert,"Whenever you play a card with Overload, gain +1/+1."
+383,Undertaker,Neutral,Common,Minion,,1,1,2,Naxxramus,Whenever you summon a minion with Deathrattle gain +1/+1.
+384,Unleash the Hounds,Hunter,Common,Spell,,3,,,Expert,"For each enemy minion, summon a 1/1 Hound with Charge."
+385,Unstable Ghoul,Neutral,Common,Minion,,2,1,3,Naxxramus,Taunt. Deathrattle: Deal 1 damage to all minions.
+386,Upgrade!,Warrior,Rare,Spell,,1,,,Expert,"If you have a weapon, give it +1/+1. Otherwise equip a 1/3 weapon."
+387,Vanish,Rogue,Common,Spell,,6,,,Basic,Return all minions to their owner's hand.
+388,Vaporize,Mage,Rare,Spell,,3,,,Expert,"Secret: When a minion attacks your hero, destroy it."
+389,Venture Co. Mercenary,Neutral,Common,Minion,,5,7,6,Expert,Your minions cost (3) more.
+390,Violet Teacher,Neutral,Rare,Minion,,4,3,5,Expert,"Whenever you cast a spell, summon a 1/1 Violet Apprentice."
+391,Void Terror,Warlock,Rare,Minion,Demon,3,3,3,Expert,Battlecry: Destroy the minions on either side of this minion and gain their Attack and Health.
+392,Voidcaller,Warlock,Common,Minion,Demon,4,3,4,Naxxramus,Deathrattle: Put a random Demon from your hand into the battlefield.
+393,Voidwalker,Warlock,Free,Minion,Demon,1,1,3,Basic,Taunt
+394,Voodoo Doctor,Neutral,Free,Minion,,1,2,1,Basic,Battlecry: Restore 2 Health.
+395,Wailing Soul,Neutral,Rare,Minion,,4,3,5,Naxxramus,Battlecry: Silence your other minions.
+396,War Golem,Neutral,Common,Minion,,7,7,7,Basic,
+397,Warsong Commander,Warrior,Free,Minion,,3,2,3,Basic,"Whenever you summon a minion with 3 or less Attack, give it Charge."
+398,Water Elemental,Mage,Common,Minion,,4,3,6,Basic,Freeze any character damaged by this minion.
+399,Webspinner,Hunter,Common,Minion,Beast,1,1,1,Naxxramus,Deathrattle: Add a random Beast card to your hand.
+400,Whirlwind,Warrior,Common,Spell,,1,,,Basic,Deal 1 damage to ALL minions.
+401,Wild Growth,Druid,Free,Spell,,2,,,Basic,Gain an empty Mana Crystal.
+402,Wild Pyromancer,Neutral,Rare,Minion,,2,3,2,Expert,"After you cast a spell, deal 1 damage to ALL minions."
+403,Windfury,Shaman,Free,Spell,,2,,,Basic,Give a minion Windfury.
+404,Windfury Harpy,Neutral,Common,Minion,,6,4,5,Expert,Windfury
+405,Windspeaker,Shaman,Common,Minion,,4,3,3,Basic,Battlecry: Give a friendly minion Windfury.
+406,Wisp,Neutral,Common,Minion,,0,1,1,Expert,
+407,Wolfrider,Neutral,Free,Minion,,3,3,1,Basic,Charge
+408,Worgen Infiltrator,Neutral,Common,Minion,,1,2,1,Expert,Stealth
+409,Wrath,Druid,Common,Spell,,2,,,Expert,Choose One - Deal 3 damage to a minion; or 1 damage and draw a card.
+410,Young Dragonhawk,Neutral,Common,Minion,Beast,1,1,1,Expert,Windfury
+411,Young Priestess,Neutral,Rare,Minion,,1,2,1,Expert,"At the end of your turn, give another random friendly minion +1 Health."
+412,Youthful Brewmaster,Neutral,Common,Minion,,2,3,2,Expert,Battlecry: Return a friendly minion from the battlefield to your hand.
+413,Ysera,Neutral,Legendary,Minion,Dragon,9,4,12,Expert,"At the end of your turn, draw a Dream Card."
+414,Zombie Chow,Neutral,Common,Minion,,1,2,3,Naxxramus,Deathrattle: Restore 5 Health to the enemy hero.

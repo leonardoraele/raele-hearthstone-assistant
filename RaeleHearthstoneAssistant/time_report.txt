@@ -1,0 +1,44 @@
+TODO
+	- Criar função de reset para mudar o número de linhas lidas pro scanner para 0 para
+		evitar que o usuário tenha de resetar a aplicação para poder capturar os logs de
+		um Hearthstone recentemente aberto.
+		OBS: Se possível, identificar quando o Hearthstone é aberto para resetar
+		automaticamente.
+	- Popular o banco com os textos em outros idiomas
+
+BUG
+	- Erro na contagem da quantidade de cards
+		> Adicionar 5 cards
+		> Clicar no '-' 5 vezes
+		> Adicionar o mesmo card
+		Esperado: Adicionar 1 card (deveria estar com 0 antes)
+		Resultado: Adicionados 6 cards na lista (como se tivesse desconsiderado os 5 cliquem em '-')
+
+02/09/2014, 6h
+	- Projeto criado
+	- Código inicial importado do projeto original (pacotes core, entities, input e input.recorders
+	- Criada feature de thread própria para HearthstoneLogScanner (com métodos start e stop)
+	- Relizados testes básicos com a classe HearthstoneLogScanner para garantir a funcionalidade
+03/09/2014, 2h
+	- Instalando, testando e resolvendo problemas de banco de dados e Hibernate
+04/09/2014, 1h
+	- Instalando, testando e resolvendo problemas de banco de dados e Hibernate
+04/09/2014, 2h (21h-23h)
+	- Instalando, testando e resolvendo problemas de banco de dados e Hibernate
+	- Entidades e relacionamentos revisados
+	- Hibernate funcional
+	- Arquivo HSList.csv importado de http://www.killdev.com/main/cardlist
+	- Criado programa LoadCSV para popular o banco com a base csv
+	- Classe CardDao adaptada para as mudanças na classe Card
+09/09/2014, 1h
+	- Testando GameModel
+	- Início do desenvolvimentod a interface gráfica
+	- Criado DeckModel.fxml
+15/09/2014, 1h
+	- PocFX: Testando ListView de DeckModel.fxml com layout de CardlistEntry.fxml
+16/09/2014, 5h
+	- Testando inicialização da GUI via thread main; Feito com JFXPanel
+17/09/2014, 6h
+	- Desenvolvendo pacotes model e model.gui
+	- Classe Main recodificada para incluir GUI
+	- Integrado 
