@@ -6,14 +6,6 @@ TODO
 		automaticamente.
 	- Popular o banco com os textos em outros idiomas
 
-BUG
-	- Erro na contagem da quantidade de cards
-		> Adicionar 5 cards
-		> Clicar no '-' 5 vezes
-		> Adicionar o mesmo card
-		Esperado: Adicionar 1 card (deveria estar com 0 antes)
-		Resultado: Adicionados 6 cards na lista (como se tivesse desconsiderado os 5 cliquem em '-')
-
 02/09/2014, 6h
 	- Projeto criado
 	- Código inicial importado do projeto original (pacotes core, entities, input e input.recorders
