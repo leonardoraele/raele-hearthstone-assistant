@@ -15,13 +15,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.util.Callback;
 
-public class JFXFrame extends JFrame {
+public class JFXFrame<T> extends JFrame {
 	
 	private static final long serialVersionUID = 1L;
 	
 	private JFXPanel jfxPanel;
 	private Parent parent;
-	private Object controller;
+	private T controller;
 	private FXMLLoader loader;
 	
 	public JFXFrame(String title, URL fxmlUrl)
@@ -39,7 +39,7 @@ public class JFXFrame extends JFrame {
 		}
 	}
 	
-	public JFXFrame(String title, URL fxmlUrl, Callback<JFXFrame, Void> callback)
+	public JFXFrame(String title, URL fxmlUrl, Callback<JFXFrame<T>, Void> callback)
 	throws IOException
 	{
 		super(title);
@@ -58,7 +58,7 @@ public class JFXFrame extends JFrame {
 		this.controller = this.loader.getController();
 	}
 	
-	private void setup(Callback<JFXFrame, Void> callback) {
+	private void setup(Callback<JFXFrame<T>, Void> callback) {
 		// Setup JFX
 		this.jfxPanel.setScene(new Scene(this.parent));
 		
@@ -83,7 +83,7 @@ public class JFXFrame extends JFrame {
 		return jfxPanel;
 	}
 
-	public Object getController() {
+	public T getController() {
 		return controller;
 	}
 	

@@ -5,7 +5,7 @@ import java.io.File;
 import raele.rha.model.GameModel;
 import raele.util.javafx.JFXFrame;
 
-public class GameModelGUI extends JFXFrame {
+public class GameModelGUI extends JFXFrame<DeckModelController> {
 	
 	private static final long serialVersionUID = 1L;
 	private GameModel model;

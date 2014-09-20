@@ -1,7 +1,0 @@
-input.recorders.IgnoreRecorder
-input.recorders.ZoneRecorder
-input.recorders.Direct3DPropertiesRecorder
-input.recorders.EngineVersionRecorder
-input.recorders.GfxDeviceRecorder
-input.recorders.DesktopRecorder
-input.recorders.ErrorRecorder

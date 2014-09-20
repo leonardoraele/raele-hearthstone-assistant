@@ -47,9 +47,9 @@ public class Main {
 		H2Database.start();
 		Dao.boot("H2");
 		scanner.refresh();
-		((DeckModelController) gui.getController()).clearModel();
+		gui.getController().clearModel();
 		scanner.refresh();
-		((DeckModelController) gui.getController()).resetModel();
+		gui.getController().resetModel();
 		scanner.start();
 		
 		gui.addWindowListener(new EmptyWindowListenerStub() { // TODO <- Deveria ter isso??

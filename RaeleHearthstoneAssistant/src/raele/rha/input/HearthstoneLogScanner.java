@@ -16,7 +16,7 @@ import java.util.TimerTask;
 
 public class HearthstoneLogScanner {
 	
-	private static final String CONFIG_FILENAME = "rhl_recorders.txt";
+	private static final String CONFIG_FILENAME = "rha_recorders.txt";
 	private static final long TIMER_DELAY = 1000;
 	private List<Recorder> chain;
 	private int readLines;

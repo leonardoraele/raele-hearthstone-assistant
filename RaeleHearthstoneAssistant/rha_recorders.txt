@@ -1,0 +1,7 @@
+raele.rha.input.recorders.IgnoreRecorder
+raele.rha.input.recorders.ZoneRecorder
+raele.rha.input.recorders.Direct3DPropertiesRecorder
+raele.rha.input.recorders.EngineVersionRecorder
+raele.rha.input.recorders.GfxDeviceRecorder
+raele.rha.input.recorders.DesktopRecorder
+raele.rha.input.recorders.ErrorRecorder
