@@ -7,7 +7,7 @@ import java.util.concurrent.ExecutionException;
 
 import javax.swing.JFrame;
 
-import raele.util.awt.SimpleWindowListener;
+import raele.util.awt.EmptyWindowListenerStub;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.fxml.FXMLLoader;
@@ -65,7 +65,7 @@ public class JFXFrame extends JFrame {
 		// Setup Swing
 		this.add(this.jfxPanel);
 		this.pack();
-		this.addWindowListener(new SimpleWindowListener() {
+		this.addWindowListener(new EmptyWindowListenerStub() {
 			@Override
 			public void windowClosing(WindowEvent e) {
 				JFXFrame.this.dispose();

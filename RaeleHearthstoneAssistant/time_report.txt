@@ -40,5 +40,10 @@ BUG
 	- Testando inicialização da GUI via thread main; Feito com JFXPanel
 17/09/2014, 6h
 	- Desenvolvendo pacotes model e model.gui
-	- Classe Main recodificada para incluir GUI
-	- Integrado 
+	- Classe Main recodificada para incluir GUI 
+20/09/2014, 2h
+	- Criado grid de informações embaixo da lista do deck
+	- Criado display da quantidade de cards no deck
+	- Criado botão de Reset
+	- Criado botão de Clear
+	- Modificado layout

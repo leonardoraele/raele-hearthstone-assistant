@@ -10,7 +10,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="model.gui.DeckModelController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="raele.rha.model.gui.DeckModelController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -54,32 +54,63 @@
       </ToolBar>
    </bottom>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="648.0" prefWidth="320.0" spacing="12.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="TOP_CENTER" prefHeight="648.0" prefWidth="320.0" spacing="12.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <FlowPane alignment="CENTER" prefHeight="71.0" prefWidth="320.0">
                <children>
-                  <FlowPane alignment="CENTER" prefHeight="71.0" prefWidth="320.0">
-                     <children>
-                        <ImageView fitHeight="71.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../img/herobox.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </FlowPane>
-                  <HBox alignment="CENTER" prefWidth="320.0" spacing="8.0">
-                     <children>
-                        <TextField fx:id="addText" prefWidth="230.0" />
-                        <Button fx:id="addButton" defaultButton="true" mnemonicParsing="false" text="Adicionar" />
-                     </children>
-                  </HBox>
-                  <ListView fx:id="decklist" prefHeight="530.0" prefWidth="320.0" />
+                  <ImageView fitHeight="71.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/herobox.png" />
+                     </image>
+                  </ImageView>
                </children>
-               <padding>
-                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
-               </padding>
-            </VBox>
+            </FlowPane>
+            <BorderPane>
+               <center>
+                  <TextField fx:id="addText" promptText="Adicione um card ao seu deck" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets right="8.0" />
+                     </BorderPane.margin>
+                  </TextField>
+               </center>
+               <right>
+                  <Button fx:id="addButton" defaultButton="true" mnemonicParsing="false" text="Adicionar" BorderPane.alignment="CENTER" />
+               </right>
+            </BorderPane>
+            <ListView fx:id="decklist" prefHeight="530.0" prefWidth="320.0" />
+            <GridPane hgap="4.0" vgap="4.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <right>
+                        <Label fx:id="quantity" text="27/30" BorderPane.alignment="CENTER" />
+                     </right>
+                     <left>
+                        <Label text="Quantity" BorderPane.alignment="CENTER" />
+                     </left>
+                  </BorderPane>
+                  <BorderPane GridPane.columnIndex="1">
+                     <center>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="resetButton" mnemonicParsing="false" text="Reset" />
+                              <Button fx:id="clearButton" mnemonicParsing="false" text="Clear" />
+                           </children>
+                        </HBox>
+                     </center>
+                  </BorderPane>
+               </children>
+            </GridPane>
          </children>
-      </AnchorPane>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding>
+      </VBox>
    </center>
 </BorderPane>

@@ -6,13 +6,13 @@ import java.io.IOException;
 import java.util.Locale;
 import java.util.Scanner;
 
-import persistence.Dao;
-import persistence.entity.Card;
-import persistence.entity.CardSet;
-import persistence.entity.Category;
-import persistence.entity.Hero;
-import persistence.entity.Quality;
-import persistence.entity.Race;
+import raele.rha.persistence.Dao;
+import raele.rha.persistence.entity.Card;
+import raele.rha.persistence.entity.CardSet;
+import raele.rha.persistence.entity.Category;
+import raele.rha.persistence.entity.Hero;
+import raele.rha.persistence.entity.Quality;
+import raele.rha.persistence.entity.Race;
 
 public class LoadCSV {
 	

@@ -8,9 +8,54 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <AnchorPane>
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <right>
+      <HBox alignment="CENTER_LEFT" spacing="8.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="add" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="remove" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/remove.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </right>
+   <center>
+      <BorderPane BorderPane.alignment="CENTER">
+         <left>
+            <Label fx:id="name" text="Card Name" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </left>
+         <right>
+            <Label fx:id="quantity" text="2" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </right>
+         <padding>
+            <Insets left="8.0" right="8.0" />
+         </padding>
+      </BorderPane>
+   </center>
+   <left>
+      <AnchorPane BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="22.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -24,42 +69,5 @@
             </Label>
          </children>
       </AnchorPane>
-      <HBox alignment="CENTER_LEFT" prefWidth="184.0">
-         <children>
-            <Label fx:id="name" text="Card Name">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <Label fx:id="quantity" text="2">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-         </children>
-         <HBox.margin>
-            <Insets />
-         </HBox.margin>
-      </HBox>
-      <HBox alignment="CENTER_LEFT" spacing="8.0">
-         <children>
-            <Button fx:id="remove" mnemonicParsing="false">
-               <graphic>
-                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/remove.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
-            <Button fx:id="add" mnemonicParsing="false">
-               <graphic>
-                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/add.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
-         </children>
-      </HBox>
-   </children>
-</HBox>
+   </left>
+</BorderPane>
