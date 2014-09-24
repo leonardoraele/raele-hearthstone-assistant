@@ -7,7 +7,7 @@ import raele.rha.input.HearthstoneLogScanner;
 import raele.rha.input.LogEvent;
 import raele.rha.input.LogEventListener;
 import raele.rha.model.GameModel;
-import raele.rha.model.gui.DeckModelController;
+import raele.rha.model.gui.GameModelController;
 import raele.rha.model.gui.GameModelGUI;
 import raele.rha.persistence.Dao;
 import raele.util.awt.EmptyWindowListenerStub;
@@ -39,7 +39,7 @@ public class Main {
 					public void recordEvent(LogEvent event) {
 						if (event.getZoneChange() != null)
 						{
-							((DeckModelController) gui.getController()).refreshDecklist();
+							((GameModelController) gui.getController()).refreshDecklist();
 						}
 					}
 				});

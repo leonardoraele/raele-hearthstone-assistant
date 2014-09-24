@@ -5,7 +5,7 @@ import java.io.File;
 import raele.rha.model.GameModel;
 import raele.util.javafx.JFXFrame;
 
-public class GameModelGUI extends JFXFrame<DeckModelController> {
+public class GameModelGUI extends JFXFrame<GameModelController> {
 	
 	private static final long serialVersionUID = 1L;
 	private GameModel model;
@@ -13,11 +13,11 @@ public class GameModelGUI extends JFXFrame<DeckModelController> {
 	public GameModelGUI(GameModel model)
 	throws Exception //TODO <- Tentar remover essa exceção
 	{
-		super(model.getFriendlyDeck().getName(), new File("res/fxml/DeckModel.fxml").toURI().toURL());
+		super(model.getFriendlyDeck().getName(), new File("res/fxml/GameModel.fxml").toURI().toURL());
 		this.model = model;
 		
-		DeckModelController controller = (DeckModelController) this.getController();
-		controller.setDeck(this.model.getFriendlyDeck());
+		GameModelController controller = this.getController();
+		controller.setup(this);
 	}
 
 	public GameModel getModel() {

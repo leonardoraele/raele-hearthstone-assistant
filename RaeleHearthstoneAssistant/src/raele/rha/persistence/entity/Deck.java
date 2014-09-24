@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -14,6 +15,7 @@ import javax.persistence.OneToMany;
 public class Deck {
 	
 	private Long id;
+	private Hero hero;
 	private String name;
 	private String description;
 	private Date creationDate;
@@ -27,6 +29,7 @@ public class Deck {
 		this.name = name;
 		this.description = description;
 		this.version = 1;
+		this.hero = null;
 		this.creationDate = new Date();
 	}
 
@@ -68,6 +71,13 @@ public class Deck {
 	}
 	public void setVersion(Integer version) {
 		this.version = version;
+	}
+	@Enumerated
+	public Hero getHero() {
+		return hero;
+	}
+	public void setHero(Hero hero) {
+		this.hero = hero;
 	}
 
 	@Override

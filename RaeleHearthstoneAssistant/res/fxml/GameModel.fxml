@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
@@ -10,34 +11,46 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="raele.rha.model.gui.DeckModelController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="raele.rha.model.gui.GameModelController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
+                  <MenuItem fx:id="newDeckItem" mnemonicParsing="false" text="New Deck..." />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Open Deck..." />
+                  <Menu mnemonicParsing="false" text="Recenct Decks">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Deck 1" />
+                        <MenuItem mnemonicParsing="false" text="Deck 2" />
+                        <MenuItem mnemonicParsing="false" text="Deck 3" />
+                    </items>
+                  </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Save" />
+                  <MenuItem mnemonicParsing="false" text="Save As..." />
+                  <SeparatorMenuItem mnemonicParsing="false" />
                   <MenuItem mnemonicParsing="false" text="Export..." />
+                  <MenuItem mnemonicParsing="false" text="Import..." />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Delete" />
                   <SeparatorMenuItem mnemonicParsing="false" />
               <MenuItem mnemonicParsing="false" text="Close" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Deck">
                <items>
-                  <MenuItem mnemonicParsing="false" text="New..." />
-                  <MenuItem mnemonicParsing="false" text="Change..." />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Save" />
-                  <MenuItem mnemonicParsing="false" text="Save As..." />
-                  <SeparatorMenuItem mnemonicParsing="false" />
                   <MenuItem mnemonicParsing="false" text="Show History..." />
                   <MenuItem mnemonicParsing="false" text="Rename..." />
                   <MenuItem mnemonicParsing="false" text="Change Hero..." />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Load..." />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Delete" />
                </items>
           </Menu>
+            <Menu mnemonicParsing="false" text="Options">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Settings..." />
+              </items>
+            </Menu>
           <Menu mnemonicParsing="false" text="Help">
             <items>
               <MenuItem mnemonicParsing="false" text="About" />
@@ -56,13 +69,22 @@
    <center>
       <VBox alignment="TOP_CENTER" prefHeight="648.0" prefWidth="320.0" spacing="12.0" BorderPane.alignment="CENTER">
          <children>
-            <FlowPane alignment="CENTER" prefHeight="71.0" prefWidth="320.0">
+            <FlowPane alignment="CENTER">
                <children>
-                  <ImageView fitHeight="71.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/herobox.png" />
-                     </image>
-                  </ImageView>
+                  <AnchorPane style="-fx-background-image: url('res/img/portrait_druid');">
+                     <children>
+                        <ImageView fx:id="deckPortrait" fitHeight="71.0" fitWidth="179.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/portrait_druid.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="deckName" layoutX="17.0" layoutY="33.0" style="-fx-font-weight: bold;" text="Mid-Range Druid" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
                </children>
             </FlowPane>
             <BorderPane>

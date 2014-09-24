@@ -14,7 +14,7 @@
          <children>
             <Button fx:id="add" mnemonicParsing="false">
                <graphic>
-                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="16.0" fitWidth="16.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/add.png" />
                      </image>
@@ -35,13 +35,6 @@
    </right>
    <center>
       <BorderPane BorderPane.alignment="CENTER">
-         <left>
-            <Label fx:id="name" text="Card Name" BorderPane.alignment="CENTER">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-         </left>
          <right>
             <Label fx:id="quantity" text="2" BorderPane.alignment="CENTER">
                <font>
@@ -52,6 +45,42 @@
          <padding>
             <Insets left="8.0" right="8.0" />
          </padding>
+         <left>
+            <HBox alignment="CENTER_LEFT" spacing="4.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="name" text="Card Name">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Label text="(">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="drawChance" text="16%">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text=")">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </HBox>
+         </left>
       </BorderPane>
    </center>
    <left>

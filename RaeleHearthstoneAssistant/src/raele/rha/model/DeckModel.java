@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 import raele.rha.persistence.entity.Card;
 import raele.rha.persistence.entity.Deck;
 import raele.rha.persistence.entity.DeckEntry;
+import raele.rha.persistence.entity.Hero;
 
 public class DeckModel {
 
@@ -41,7 +42,7 @@ public class DeckModel {
 		
 		if (this.deck == null)
 		{
-			this.deck = new Deck("Novo Deck", "");
+			this.deck = new Deck();
 		}
 		
 		for (DeckEntry entry : this.deck.getEntries())
@@ -150,6 +151,7 @@ public class DeckModel {
 	public Deck createDeck()
 	{
 		Deck result = new Deck(this.deck.getName(), this.deck.getDescription());
+		result.setHero(this.deck.getHero());
 
 		HashSet<DeckEntry> entries = new HashSet<DeckEntry>(this.cardlist.size());
 		for (CardlistEntry entry : this.cardlist)
@@ -214,6 +216,32 @@ public class DeckModel {
 
 	public void clear() {
 		this.cardlist.clear();
+	}
+
+	public Hero getHero() {
+		return this.deck.getHero();
+	}
+
+	public Double chanceToDraw(Card card) {
+		Double result;
+		
+		CardlistEntry entry = this.cardlist.stream()
+				.filter(e -> card.equals(e.getCard()))
+				.findAny()
+				.orElse(null);
+		
+		if (entry == null || entry.getCurrent() == 0)
+		{
+			result = 0.0D;
+		}
+		else
+		{
+			double current = entry.getCurrent();
+			double total = this.getCurrentCount();
+			result = current / total;
+		}
+		
+		return result;
 	}
 
 }
