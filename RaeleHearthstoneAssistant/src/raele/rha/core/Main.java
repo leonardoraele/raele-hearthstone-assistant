@@ -29,6 +29,9 @@ public class Main {
 		loading.setLocationRelativeTo(null);
 		loading.setVisible(true);
 		
+		H2Database.start();
+		Dao.boot("H2");
+		
 		HearthstoneLogScanner scanner = new HearthstoneLogScanner(OUTPUTLOG_FILENAME);
 		GameModel model = new GameModel();
 		GameModelGUI gui = new GameModelGUI(model);
@@ -52,14 +55,6 @@ public class Main {
 					}
 				});
 		
-		H2Database.start();
-		Dao.boot("H2");
-		scanner.refresh();
-//		gui.getController().clearModel();
-//		scanner.refresh();
-		gui.getController().resetModel();
-		scanner.start();
-		
 		gui.addWindowListener(new EmptyWindowListenerStub() { // TODO <- Deveria ter isso??
 			@Override
 			public void windowClosing(WindowEvent e) {
@@ -77,8 +72,11 @@ public class Main {
 			}
 		});
 		
-		loading.dispose();
+		scanner.refresh();
+		gui.getController().resetModel();
+		scanner.start();
 		gui.setVisible(true);
+		loading.dispose();
 	}
 	
 }

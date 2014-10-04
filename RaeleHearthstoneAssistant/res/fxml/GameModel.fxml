@@ -20,21 +20,10 @@
                   <MenuItem fx:id="newDeckItem" mnemonicParsing="false" text="New Deck..." />
                   <SeparatorMenuItem mnemonicParsing="false" />
                   <MenuItem fx:id="openDeckItem" mnemonicParsing="false" text="Open Deck..." />
-                  <Menu mnemonicParsing="false" text="* Recenct Decks">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Deck 1" />
-                        <MenuItem mnemonicParsing="false" text="Deck 2" />
-                        <MenuItem mnemonicParsing="false" text="Deck 3" />
-                    </items>
-                  </Menu>
+                  <Menu fx:id="recentDecksMenu" mnemonicParsing="false" text="Recenct Decks" />
                   <SeparatorMenuItem mnemonicParsing="false" />
                   <MenuItem fx:id="saveItem" mnemonicParsing="false" text="Save" />
                   <MenuItem fx:id="saveAsItem" mnemonicParsing="false" text="Save As..." />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="* Export..." />
-                  <MenuItem mnemonicParsing="false" text="* Import..." />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="* Delete" />
                   <SeparatorMenuItem mnemonicParsing="false" />
               <MenuItem fx:id="closeItem" mnemonicParsing="false" text="Close" />
             </items>

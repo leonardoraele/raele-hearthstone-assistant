@@ -1,12 +1,5 @@
 package raele.rha.persistence.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-
-@Entity
 public class DeckEntry {
 
 	private Long id;
@@ -23,8 +16,6 @@ public class DeckEntry {
 
 	public DeckEntry() {}
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	public Long getId() {
 		return id;
 	}
@@ -37,14 +28,12 @@ public class DeckEntry {
 	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
 	}
-	@ManyToOne
 	public Card getCard() {
 		return card;
 	}
 	public void setCard(Card card) {
 		this.card = card;
 	}
-	@ManyToOne
 	public Deck getDeck() {
 		return deck;
 	}

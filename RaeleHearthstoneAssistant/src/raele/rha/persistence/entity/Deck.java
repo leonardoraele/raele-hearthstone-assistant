@@ -4,14 +4,6 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.Entity;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-
-@Entity
 public class Deck {
 	
 	private Long id;
@@ -33,8 +25,6 @@ public class Deck {
 		this.creationDate = new Date();
 	}
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	public Long getId() {
 		return id;
 	}
@@ -47,7 +37,6 @@ public class Deck {
 	public void setName(String name) {
 		this.name = name;
 	}
-	@OneToMany(mappedBy="deck")
 	public Set<DeckEntry> getEntries() {
 		return entries;
 	}
@@ -72,7 +61,6 @@ public class Deck {
 	public void setVersion(Integer version) {
 		this.version = version;
 	}
-	@Enumerated
 	public Hero getHero() {
 		return hero;
 	}

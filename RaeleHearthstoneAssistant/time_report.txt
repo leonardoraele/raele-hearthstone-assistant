@@ -9,6 +9,11 @@ TODO
 BUG
 	- Ao selecionar cards pelo nome, confunde cards de nomes parecidos.
 		Ex: Slam com Shield Slam
+	- Submenu de arquivos recentes não tem tamanho máximo
+	- Quando um arquivo é aberto, ele não volta com os cards ordenados igual a
+		como foi salvo
+	- Não é possível cancelar o wizard de criar novo deck (mesmo se fechar a
+		janela, o deck é criado)
 
 02/09/2014, 6h
 	- Projeto criado
@@ -43,6 +48,9 @@ BUG
 	- Criado botão de Reset
 	- Criado botão de Clear
 	- Modificado layout
-04/10/2014, 3hExpansão do menu
+04/10/2014, 3h
+	- Expansão do menu
 	- Aprimoramento no controle de heróis e retratos
 	- Implementadas funções de save e load de decks em arquivos
+05/10/2014, 2h
+	- Implementação do submenu de arquivos recents

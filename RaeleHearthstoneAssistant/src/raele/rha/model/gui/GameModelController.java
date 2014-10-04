@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 
@@ -13,6 +14,8 @@ import raele.rha.model.CardlistEntry;
 import raele.rha.model.DeckModel;
 import raele.rha.model.GameModel;
 import raele.rha.persistence.CardDao;
+import raele.rha.persistence.Dao;
+import raele.rha.persistence.RecentDecks;
 import raele.rha.persistence.entity.Card;
 import raele.rha.persistence.entity.Deck;
 import raele.rha.persistence.entity.Hero;
@@ -24,6 +27,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -48,6 +52,7 @@ public class GameModelController {
 	@FXML private MenuItem closeItem;
 	@FXML private MenuItem renameItem;
 	@FXML private MenuItem changeHeroItem;
+	@FXML private Menu recentDecksMenu;
 	@FXML private ImageView deckPortrait;
 	@FXML private ImageView changeHeroButton;
 	@FXML private Label deckName;
@@ -58,10 +63,12 @@ public class GameModelController {
 	private GameModel gameModel;
 	private DeckModel deckModel;
 	private File currentFile;
+	private List<RecentDecks> recentDecks;
 	
 	@FXML
 	public void initialize()
 	{
+		setupRecentDecks();
 		this.addButton.setOnAction(this::addButtonAction);
 		this.resetButton.setOnAction(this::resetButtonAction);
 		this.clearButton.setOnAction(this::clearButtonAction);
@@ -76,6 +83,60 @@ public class GameModelController {
 		this.decklist.setCellFactory(this.cardlistCellfactory);
 		this.deckName.setOnMouseClicked(this::nameMouseClicked);
 		this.changeHeroButton.setOnMouseClicked(this::changeHeroMouseClicked);
+	}
+
+	private void setupRecentDecks()
+	{
+		if (this.recentDecks == null)
+		{
+			this.recentDecks = new LinkedList<RecentDecks>();
+		}
+		else
+		{
+			this.recentDecks.clear();
+		}
+		
+		Dao dao = new Dao("H2");
+		List<RecentDecks> loadedRecentDecks = dao.selectAll(RecentDecks.class);
+		dao.close();
+		
+		for (RecentDecks recentDeck : loadedRecentDecks)
+		{
+			File file = new File(recentDeck.getPath());
+			FileMenuItem item = new FileMenuItem(file, this, this::popupError);
+			this.recentDecksMenu.getItems().add(item);
+		}
+	}
+
+	private void addRecentDeck(File file)
+	{
+		boolean alreadyContains = this.recentDecks.stream().anyMatch(
+				recent -> file.getAbsolutePath().equals(recent.getPath())
+				);
+		
+		if (!alreadyContains)
+		{
+			FileMenuItem item = new FileMenuItem(file, this, this::popupError);
+			this.recentDecksMenu.getItems().add(item);
+			
+			RecentDecks deck = new RecentDecks();
+			deck.setPath(file.getAbsolutePath());
+			this.recentDecks.add(0, deck);
+			
+			Dao dao = new Dao("H2");
+			dao.insert(deck);
+			dao.close();
+		}
+	}
+	
+	public Void popupError(IOException e)
+	{
+		e.printStackTrace();
+		Dialogs.create()
+				.title("Error")
+				.message(e.toString())
+				.showError();
+		return null;
 	}
 
 	public void setup(GameModelGUI gui)
@@ -97,22 +158,22 @@ public class GameModelController {
 	}
 	
 	public void refresh() {
+		Platform.runLater(this::privateRefresh);
+	}
+	
+	private void privateRefresh()
+	{
 		String deckName = ""+this.deckModel.getName();
 		this.gui.setTitle(deckName + " - Raele Hearthstone Assistant");
 		this.deckName.setText(deckName);
 		
-		Platform.runLater(new Runnable() {
-			@Override
-			public void run() {
-				GameModelController.this.setPortrait(GameModelController.this.deckModel.getHero());
-				
-				List<CardlistEntry> cards = GameModelController.this.deckModel.getEntries();
-				cards.sort((a, b) -> a.getCard().getMana() - b.getCard().getMana());
-				ObservableList<CardlistEntry> observableList = FXCollections.observableArrayList(cards);
-				GameModelController.this.decklist.setItems(observableList);
-				GameModelController.this.quantity.setText("" + GameModelController.this.deckModel.getCurrentCount() + "/" + GameModelController.this.deckModel.getMaximumCount());
-			}
-		});
+		this.setPortrait(GameModelController.this.deckModel.getHero());
+		
+		List<CardlistEntry> cards = this.deckModel.getEntries();
+		cards.sort((a, b) -> a.getCard().getMana() - b.getCard().getMana());
+		ObservableList<CardlistEntry> observableList = FXCollections.observableArrayList(cards);
+		this.decklist.setItems(observableList);
+		this.quantity.setText("" + this.deckModel.getCurrentCount() + "/" + this.deckModel.getMaximumCount());
 	}
 
 	private void setPortrait(Hero hero) {
@@ -215,18 +276,25 @@ public class GameModelController {
 		if (choosen != null)
 		{
 			try {
-				FileInputStream input = new FileInputStream(choosen);
-				this.deckModel.importDeck(input);
-				input.close();
-				
-				this.loadDeck(this.deckModel.createDeck());
-				this.currentFile = choosen;
+				this.open(choosen);
 			} catch (IOException e) {
 				e.printStackTrace(System.err);
 			}
 		}
 	}
 	
+	public void open(File choosen)
+	throws IOException
+	{
+		FileInputStream input = new FileInputStream(choosen);
+		this.deckModel.importDeck(input);
+		input.close();
+		
+		this.addRecentDeck(choosen);
+		this.refresh();
+		this.currentFile = choosen;
+	}
+
 	private void saveItemAction(ActionEvent event)
 	{
 		this.save();
@@ -286,6 +354,7 @@ public class GameModelController {
 		this.deckModel.exportDeck(output);
 		output.close();
 		
+		this.addRecentDeck(choosen);
 		this.currentFile = choosen;
 	}
 
