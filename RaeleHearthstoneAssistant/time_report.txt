@@ -43,5 +43,6 @@ BUG
 	- Criado botão de Reset
 	- Criado botão de Clear
 	- Modificado layout
-04/10/2014, 3h
-	- Mói de coisa
+04/10/2014, 3hExpansão do menu
+	- Aprimoramento no controle de heróis e retratos
+	- Implementadas funções de save e load de decks em arquivos
