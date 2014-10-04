@@ -19,16 +19,16 @@
             <items>
                   <MenuItem fx:id="newDeckItem" mnemonicParsing="false" text="New Deck..." />
                   <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="* Open Deck..." />
-                  <Menu mnemonicParsing="false" text="Recenct Decks">
+                  <MenuItem fx:id="openDeckItem" mnemonicParsing="false" text="Open Deck..." />
+                  <Menu mnemonicParsing="false" text="* Recenct Decks">
                     <items>
-                      <MenuItem mnemonicParsing="false" text="* Deck 1" />
-                        <MenuItem mnemonicParsing="false" text="* Deck 2" />
-                        <MenuItem mnemonicParsing="false" text="* Deck 3" />
+                      <MenuItem mnemonicParsing="false" text="Deck 1" />
+                        <MenuItem mnemonicParsing="false" text="Deck 2" />
+                        <MenuItem mnemonicParsing="false" text="Deck 3" />
                     </items>
                   </Menu>
                   <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="* Save" />
+                  <MenuItem fx:id="saveItem" mnemonicParsing="false" text="Save" />
                   <MenuItem fx:id="saveAsItem" mnemonicParsing="false" text="Save As..." />
                   <SeparatorMenuItem mnemonicParsing="false" />
                   <MenuItem mnemonicParsing="false" text="* Export..." />
@@ -42,8 +42,8 @@
           <Menu mnemonicParsing="false" text="Deck">
                <items>
                   <MenuItem mnemonicParsing="false" text="* Show History..." />
-                  <MenuItem mnemonicParsing="false" text="* Rename..." />
-                  <MenuItem mnemonicParsing="false" text="* Change Hero..." />
+                  <MenuItem fx:id="renameItem" mnemonicParsing="false" text="Rename..." />
+                  <MenuItem fx:id="changeHeroItem" mnemonicParsing="false" text="Change Hero..." />
                </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Options">
@@ -84,6 +84,11 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
+                        <ImageView fx:id="changeHeroButton" layoutX="149.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/dropdown.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </AnchorPane>
                </children>

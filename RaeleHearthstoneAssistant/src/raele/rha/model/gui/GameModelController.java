@@ -1,6 +1,7 @@
 package raele.rha.model.gui;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
@@ -29,6 +30,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.FlowPane;
+import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
 
 public class GameModelController {
 	
@@ -39,9 +42,14 @@ public class GameModelController {
 	@FXML private Button resetButton;
 	@FXML private Button clearButton;
 	@FXML private MenuItem newDeckItem;
+	@FXML private MenuItem openDeckItem;
+	@FXML private MenuItem saveItem;
 	@FXML private MenuItem saveAsItem;
 	@FXML private MenuItem closeItem;
+	@FXML private MenuItem renameItem;
+	@FXML private MenuItem changeHeroItem;
 	@FXML private ImageView deckPortrait;
+	@FXML private ImageView changeHeroButton;
 	@FXML private Label deckName;
 	@FXML private FlowPane flowPane;
 	
@@ -49,6 +57,7 @@ public class GameModelController {
 	private GameModelGUI gui;
 	private GameModel gameModel;
 	private DeckModel deckModel;
+	private File currentFile;
 	
 	@FXML
 	public void initialize()
@@ -57,12 +66,16 @@ public class GameModelController {
 		this.resetButton.setOnAction(this::resetButtonAction);
 		this.clearButton.setOnAction(this::clearButtonAction);
 		this.newDeckItem.setOnAction(this::newDeckItemAction);
+		this.openDeckItem.setOnAction(this::openDeckItemAction);
+		this.saveItem.setOnAction(this::saveItemAction);
 		this.saveAsItem.setOnAction(this::saveAsItemAction);
 		this.closeItem.setOnAction(this::closeItemAction);
+		this.renameItem.setOnAction(this::renameItemAction);
+		this.changeHeroItem.setOnAction(this::changeHeroItemAction);
 		this.cardlistCellfactory = new CardlistEntryCellFactory(this);
 		this.decklist.setCellFactory(this.cardlistCellfactory);
-		this.deckPortrait.setOnMouseClicked(this::portraitMouseClicked);
-		this.deckName.setOnMouseClicked(this::portraitMouseClicked);
+		this.deckName.setOnMouseClicked(this::nameMouseClicked);
+		this.changeHeroButton.setOnMouseClicked(this::changeHeroMouseClicked);
 	}
 
 	public void setup(GameModelGUI gui)
@@ -80,19 +93,19 @@ public class GameModelController {
 
 	public void loadDeck(Deck deck) {
 		this.deckModel.load(deck);
-		this.gui.setTitle(deck.getName());
-		this.deckName.setText(deck.getName());
-		String heroName = deck.getHero() != null ? deck.getHero().toString() : Hero.neutral.toString();
-		String filePath = "res/img/portrait_" + heroName + ".png";
-		Image portraitImage = new Image("file:" + filePath);
-		this.deckPortrait.setImage(portraitImage);
-		this.refreshDecklist();
+		this.refresh();
 	}
 	
-	public void refreshDecklist() {
+	public void refresh() {
+		String deckName = ""+this.deckModel.getName();
+		this.gui.setTitle(deckName + " - Raele Hearthstone Assistant");
+		this.deckName.setText(deckName);
+		
 		Platform.runLater(new Runnable() {
 			@Override
 			public void run() {
+				GameModelController.this.setPortrait(GameModelController.this.deckModel.getHero());
+				
 				List<CardlistEntry> cards = GameModelController.this.deckModel.getEntries();
 				cards.sort((a, b) -> a.getCard().getMana() - b.getCard().getMana());
 				ObservableList<CardlistEntry> observableList = FXCollections.observableArrayList(cards);
@@ -100,6 +113,13 @@ public class GameModelController {
 				GameModelController.this.quantity.setText("" + GameModelController.this.deckModel.getCurrentCount() + "/" + GameModelController.this.deckModel.getMaximumCount());
 			}
 		});
+	}
+
+	private void setPortrait(Hero hero) {
+		String heroName = hero != null ? hero.toString() : Hero.neutral.toString();
+		String filePath = "res/img/portrait_" + heroName + ".png";
+		Image portraitImage = new Image("file:" + filePath);
+		this.deckPortrait.setImage(portraitImage);
 	}
 
 	private void addButtonAction(ActionEvent event)
@@ -120,7 +140,7 @@ public class GameModelController {
 		if (card != null)
 		{
 			this.deckModel.addCard(card);
-			this.refreshDecklist();
+			this.refresh();
 		}
 		else
 		{
@@ -136,7 +156,7 @@ public class GameModelController {
 	public void resetModel()
 	{
 		this.deckModel.reset();
-		this.refreshDecklist();
+		this.refresh();
 	}
 
 	private void clearButtonAction(ActionEvent event)
@@ -149,7 +169,7 @@ public class GameModelController {
 		this.deckModel.setName("");
 		this.deckModel.setHero(Hero.neutral);
 		this.deckModel.clear();
-		this.refreshDecklist();
+		this.refresh();
 	}
 
 	private void newDeckItemAction(ActionEvent event)
@@ -172,42 +192,103 @@ public class GameModelController {
 				.showChoices(Hero.values())
 				.orElse(null);
 		
-		Deck deck = this.deckModel.createDeck();
+		Deck deck = new Deck();
 		deck.setName(deckName);
 		deck.setHero(hero);
 		
 		this.loadDeck(deck);
 	}
 	
+	private void openDeckItemAction(ActionEvent event)
+	{
+		this.openDeck();
+	}
+	
+	public void openDeck()
+	{
+		FileChooser fileChooser = new FileChooser();
+		fileChooser.setTitle("Open Deck");
+		fileChooser.setInitialDirectory(new File("decks"));
+		fileChooser.getExtensionFilters().addAll(new ExtensionFilter("RHA Deck", "*.rha"));
+		File choosen = fileChooser.showOpenDialog(null);
+		
+		if (choosen != null)
+		{
+			try {
+				FileInputStream input = new FileInputStream(choosen);
+				this.deckModel.importDeck(input);
+				input.close();
+				
+				this.loadDeck(this.deckModel.createDeck());
+				this.currentFile = choosen;
+			} catch (IOException e) {
+				e.printStackTrace(System.err);
+			}
+		}
+	}
+	
+	private void saveItemAction(ActionEvent event)
+	{
+		this.save();
+	}
+	
+	public void save()
+	{
+		if (this.currentFile != null)
+		{
+			try {
+				this.save(this.currentFile);
+			} catch (IOException e) {
+				e.printStackTrace();
+				Dialogs.create()
+						.title("Error")
+						.message(e.toString())
+						.showError();
+			}
+		}
+		else
+		{
+			this.saveAs();
+		}
+	}
+
 	private void saveAsItemAction(ActionEvent event)
 	{
 		this.saveAs();
 	}
 	
-	public void saveAs() {
-		String filename = Dialogs.create()
-				.title("Save As")
-				.message("File name")
-				.showTextInput()
-				.orElse(null);
+	public void saveAs()
+	{
+		FileChooser fileChooser = new FileChooser();
+		fileChooser.setTitle("Save Deck As...");
+		fileChooser.setInitialDirectory(new File("decks"));
+		fileChooser.getExtensionFilters().addAll(new ExtensionFilter("RHA Deck", "*.rha"));
+		File choosen = fileChooser.showSaveDialog(null);
 		
-		if (filename != null)
+		if (choosen != null)
 		{
-			Deck deck = this.deckModel.createDeck();
-			File file = new File(filename);
-			
 			try {
-				FileOutputStream output = new FileOutputStream(file);
-				output.write(deck.toString().getBytes());
-				output.close();
+				this.save(choosen);
 			} catch (IOException e) {
-				e.printStackTrace(System.err);
+				e.printStackTrace();
+				Dialogs.create()
+						.title("Error")
+						.message(e.toString())
+						.showError();
 			}
 		}
-		
-		// TODO
 	}
 	
+	public void save(File choosen)
+	throws IOException
+	{
+		FileOutputStream output = new FileOutputStream(choosen);
+		this.deckModel.exportDeck(output);
+		output.close();
+		
+		this.currentFile = choosen;
+	}
+
 	private void closeItemAction(ActionEvent event)
 	{
 		this.close();
@@ -217,18 +298,39 @@ public class GameModelController {
 	{
 		this.gui.dispose();
 	}
-
-	private void portraitMouseClicked(MouseEvent event)
+	
+	private void changeHeroItemAction(ActionEvent event)
 	{
-		Hero hero = this.deckModel.getHero();
-		if (hero == null || Hero.neutral.equals(hero))
+		this.changeHero();
+	}
+
+	private void changeHeroMouseClicked(MouseEvent event)
+	{
+		this.changeHero();
+	}
+
+	private void changeHero() {
+		Hero hero = Dialogs.create()
+				.title("Deck Wizard")
+				.message("Hero")
+				.showChoices(Hero.values())
+				.orElse(null);
+		
+		if (hero != null)
 		{
-			this.newDeck();
+			this.deckModel.setHero(hero);
+			this.refresh();
 		}
-		else
-		{
-			this.rename();
-		}
+	}
+	
+	private void renameItemAction(ActionEvent event)
+	{
+		this.rename();
+	}
+
+	private void nameMouseClicked(MouseEvent event)
+	{
+		this.rename();
 	}
 
 	public void rename() {
@@ -242,6 +344,7 @@ public class GameModelController {
 		{
 			this.deckModel.rename(newName);
 			this.deckName.setText(newName);
+			this.refresh();
 		}
 	}
 

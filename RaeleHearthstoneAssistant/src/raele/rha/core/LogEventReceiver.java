@@ -8,6 +8,7 @@ import raele.rha.input.ZoneChange;
 import raele.rha.model.GameModel;
 import raele.rha.persistence.CardDao;
 import raele.rha.persistence.entity.Card;
+import raele.rha.persistence.entity.Hero;
 
 public class LogEventReceiver implements LogEventListener {
 	
@@ -47,6 +48,7 @@ public class LogEventReceiver implements LogEventListener {
 			if (ZoneChange.FRIENDLY_HERO.equals(to))
 			{
 				System.out.println("GameModel.reset()");
+				this.model.getFriendlyDeck().setHero(Hero.forName(name));
 				this.model.reset();
 			}
 			

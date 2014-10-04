@@ -82,7 +82,7 @@ public class Deck {
 
 	@Override
 	public String toString() {
-		return name;
+		return ""+name;
 	}
 
 }

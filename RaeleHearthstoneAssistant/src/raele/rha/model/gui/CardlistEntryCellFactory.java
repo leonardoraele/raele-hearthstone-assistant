@@ -85,7 +85,6 @@ public class CardlistEntryCellFactory implements Callback<ListView<CardlistEntry
 	}
 	
 	private GameModelController controller;
-//	private ListView<CardlistEntry> listview;
 	
 	public CardlistEntryCellFactory(GameModelController controller) {
 		this.controller = controller;
@@ -93,16 +92,11 @@ public class CardlistEntryCellFactory implements Callback<ListView<CardlistEntry
 
 	@Override
 	public ListCell<CardlistEntry> call(ListView<CardlistEntry> listview) {
-//		this.listview = listview;
 		return new CardlistEntryCell();
 	}
 
 	public void refresh() {
-//		List<CardlistEntry> entries = this.deckModel.getEntries();
-//		ObservableList<CardlistEntry> observableList = FXCollections.observableArrayList(entries);
-//		this.deckModel.setEntries(observableList);
-//		this.listview.setItems(observableList);
-		this.controller.refreshDecklist();
+		this.controller.refresh();
 	}
 
 }

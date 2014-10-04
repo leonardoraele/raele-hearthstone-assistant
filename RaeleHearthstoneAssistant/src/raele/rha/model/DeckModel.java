@@ -1,11 +1,16 @@
 package raele.rha.model;
 
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Scanner;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import raele.rha.persistence.CardDao;
 import raele.rha.persistence.entity.Card;
 import raele.rha.persistence.entity.Deck;
 import raele.rha.persistence.entity.DeckEntry;
@@ -18,13 +23,19 @@ public class DeckModel {
 	
 	public DeckModel()
 	{
-		this(null);
+		this((Deck) null);
 	}
 	
 	public DeckModel(Deck deck)
 	{
 		this.cardlist = new ArrayList<CardlistEntry>(30);
 		this.load(deck);
+	}
+	
+	public DeckModel(InputStream input)
+	{
+		this();
+		this.importDeck(input);
 	}
 	
 	public void reset()
@@ -43,6 +54,9 @@ public class DeckModel {
 		if (this.deck == null)
 		{
 			this.deck = new Deck();
+			this.deck.setName("Novo Deck");
+			this.deck.setDescription("");
+			this.deck.setHero(Hero.neutral);
 		}
 		
 		for (DeckEntry entry : this.deck.getEntries())
@@ -251,6 +265,52 @@ public class DeckModel {
 		}
 		
 		return result;
+	}
+	
+	public void importDeck(InputStream input)
+	{
+		Scanner scanner = new Scanner(input);
+		Deck deck = new Deck();
+
+		deck.setName(scanner.nextLine());
+		deck.setDescription(scanner.nextLine());
+		try {
+			deck.setHero(Hero.valueOf(scanner.nextLine()));
+		} catch (IllegalArgumentException e) {}
+		
+		CardDao dao = new CardDao("H2");
+		int n = scanner.nextInt();
+		for (int i = 0; i < n; i++)
+		{
+			int quantity = scanner.nextInt();
+			long id = scanner.nextLong();
+			Card card = dao.selectById(id, Card.class);
+			DeckEntry entry = new DeckEntry(card, quantity);
+			deck.getEntries().add(entry);
+		}
+		dao.close();
+		
+		this.load(deck);
+		scanner.close();
+	}
+
+	public void exportDeck(OutputStream output)
+	{
+		PrintWriter writer = new PrintWriter(output);
+		writer.println(""+this.deck.getName());
+		writer.println(""+this.deck.getDescription());
+		writer.println(""+this.deck.getHero());
+		
+		List<CardlistEntry> entries = this.cardlist;
+		writer.println(entries.size());
+		for (CardlistEntry entry : entries)
+		{
+			writer.print(""+entry.getMaximum());
+			writer.print(" ");
+			writer.println(""+entry.getCard().getId());
+		}
+		
+		writer.close();
 	}
 
 }

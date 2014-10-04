@@ -3,6 +3,8 @@ package raele.rha.core;
 import java.awt.event.WindowEvent;
 import java.io.File;
 import java.util.Locale;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import raele.rha.input.HearthstoneLogScanner;
 import raele.rha.input.LogEvent;
@@ -18,6 +20,7 @@ import raele.util.javafx.JFXFrame;
 public class Main {
 	
 	private static final String OUTPUTLOG_FILENAME = "C:/Program Files (x86)/Hearthstone/Hearthstone_Data/output_log.txt";
+	protected static final long DISPOSE_DELAY_TO_SYSTEM_EXIT = 5000l;
 	
 	public static void main(String[] args) throws Exception {
 		JFXFrame<Void> loading = new JFXFrame<Void>("Loading...", new File("res/fxml/Loading.fxml").toURI().toURL());
@@ -44,17 +47,17 @@ public class Main {
 					public void recordEvent(LogEvent event) {
 						if (event.getZoneChange() != null)
 						{
-							((GameModelController) gui.getController()).refreshDecklist();
+							((GameModelController) gui.getController()).refresh();
 						}
 					}
 				});
 		
 		H2Database.start();
 		Dao.boot("H2");
-//		scanner.refresh();
+		scanner.refresh();
 //		gui.getController().clearModel();
 //		scanner.refresh();
-//		gui.getController().resetModel();
+		gui.getController().resetModel();
 		scanner.start();
 		
 		gui.addWindowListener(new EmptyWindowListenerStub() { // TODO <- Deveria ter isso??
@@ -64,6 +67,13 @@ public class Main {
 				scanner.stop();
 				Dao.closeAll();
 				H2Database.stop();
+				
+				new Timer(true).schedule(new TimerTask() {
+					@Override
+					public void run() {
+						System.exit(0);
+					}
+				}, DISPOSE_DELAY_TO_SYSTEM_EXIT);
 			}
 		});
 		

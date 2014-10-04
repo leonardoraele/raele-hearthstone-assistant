@@ -43,3 +43,5 @@ BUG
 	- Criado botão de Reset
 	- Criado botão de Clear
 	- Modificado layout
+04/10/2014, 3h
+	- Mói de coisa
