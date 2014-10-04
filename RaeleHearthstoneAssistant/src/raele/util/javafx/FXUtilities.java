@@ -1,10 +1,21 @@
 package raele.util.javafx;
+import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
  
+
+
+
+
+
+
 import javafx.application.Platform;
+import javafx.event.Event;
+import javafx.event.EventHandler;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
  
 /**
  * General JavaFX utilities
@@ -75,5 +86,34 @@ public class FXUtilities {
                 lock.unlock();
             }
         }
+    }
+    
+    private static class ChangeImageHandler implements EventHandler<Event> {
+    	
+    	private Image image;
+		private ImageView view;
+
+		public ChangeImageHandler(ImageView view, String filename)
+    	throws IOException
+    	{
+			this.view = view;
+    		this.image = new Image("file:" + filename);
+    	}
+
+		@Override
+		public void handle(Event event) {
+			this.view.setImage(image);
+		}
+    	
+    }
+    
+    public static void hoverConfig(ImageView view, String normal, String hover, String pressed)
+    throws IOException
+    {
+    	view.setOnMouseEntered(new ChangeImageHandler(view, hover));
+    	view.setOnMouseExited(new ChangeImageHandler(view, normal));
+    	
+    	view.setOnMousePressed(new ChangeImageHandler(view, pressed));
+    	view.setOnMouseReleased(new ChangeImageHandler(view, normal));
     }
 }

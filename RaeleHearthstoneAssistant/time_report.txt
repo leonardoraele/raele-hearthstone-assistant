@@ -54,3 +54,4 @@ BUG
 	- Implementadas funções de save e load de decks em arquivos
 05/10/2014, 2h
 	- Implementação do submenu de arquivos recents
+	- Implementando função de Util para fazer hover nos botões de imagem

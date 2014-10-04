@@ -19,6 +19,7 @@ import raele.rha.persistence.RecentDecks;
 import raele.rha.persistence.entity.Card;
 import raele.rha.persistence.entity.Deck;
 import raele.rha.persistence.entity.Hero;
+import raele.util.javafx.FXUtilities;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -83,6 +84,15 @@ public class GameModelController {
 		this.decklist.setCellFactory(this.cardlistCellfactory);
 		this.deckName.setOnMouseClicked(this::nameMouseClicked);
 		this.changeHeroButton.setOnMouseClicked(this::changeHeroMouseClicked);
+		try {
+			FXUtilities.hoverConfig(this.changeHeroButton,
+					"res/img/dropdown.png",
+					"res/img/dropdown_hover.png",
+					"res/img/dropdown_pressed.png"
+					);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	private void setupRecentDecks()
