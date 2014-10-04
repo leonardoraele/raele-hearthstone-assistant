@@ -56,6 +56,11 @@ public class DeckModel {
 	
 	public void rename(String name)
 	{
+		this.setName(name);
+	}
+
+	public void setName(String name)
+	{
 		this.deck.setName(name);
 	}
 	
@@ -220,6 +225,10 @@ public class DeckModel {
 
 	public Hero getHero() {
 		return this.deck.getHero();
+	}
+	
+	public void setHero(Hero hero) {
+		this.deck.setHero(hero);
 	}
 
 	public Double chanceToDraw(Card card) {

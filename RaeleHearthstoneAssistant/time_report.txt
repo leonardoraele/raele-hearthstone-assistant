@@ -5,6 +5,10 @@ TODO
 		OBS: Se possível, identificar quando o Hearthstone é aberto para resetar
 		automaticamente.
 	- Popular o banco com os textos em outros idiomas
+	
+BUG
+	- Ao selecionar cards pelo nome, confunde cards de nomes parecidos.
+		Ex: Slam com Shield Slam
 
 02/09/2014, 6h
 	- Projeto criado

@@ -1,5 +1,8 @@
 package raele.rha.model.gui;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
@@ -36,6 +39,8 @@ public class GameModelController {
 	@FXML private Button resetButton;
 	@FXML private Button clearButton;
 	@FXML private MenuItem newDeckItem;
+	@FXML private MenuItem saveAsItem;
+	@FXML private MenuItem closeItem;
 	@FXML private ImageView deckPortrait;
 	@FXML private Label deckName;
 	@FXML private FlowPane flowPane;
@@ -45,13 +50,15 @@ public class GameModelController {
 	private GameModel gameModel;
 	private DeckModel deckModel;
 	
-//	@FXML
+	@FXML
 	public void initialize()
 	{
 		this.addButton.setOnAction(this::addButtonAction);
 		this.resetButton.setOnAction(this::resetButtonAction);
 		this.clearButton.setOnAction(this::clearButtonAction);
 		this.newDeckItem.setOnAction(this::newDeckItemAction);
+		this.saveAsItem.setOnAction(this::saveAsItemAction);
+		this.closeItem.setOnAction(this::closeItemAction);
 		this.cardlistCellfactory = new CardlistEntryCellFactory(this);
 		this.decklist.setCellFactory(this.cardlistCellfactory);
 		this.deckPortrait.setOnMouseClicked(this::portraitMouseClicked);
@@ -139,6 +146,8 @@ public class GameModelController {
 	
 	public void clearModel()
 	{
+		this.deckModel.setName("");
+		this.deckModel.setHero(Hero.neutral);
 		this.deckModel.clear();
 		this.refreshDecklist();
 	}
@@ -170,6 +179,45 @@ public class GameModelController {
 		this.loadDeck(deck);
 	}
 	
+	private void saveAsItemAction(ActionEvent event)
+	{
+		this.saveAs();
+	}
+	
+	public void saveAs() {
+		String filename = Dialogs.create()
+				.title("Save As")
+				.message("File name")
+				.showTextInput()
+				.orElse(null);
+		
+		if (filename != null)
+		{
+			Deck deck = this.deckModel.createDeck();
+			File file = new File(filename);
+			
+			try {
+				FileOutputStream output = new FileOutputStream(file);
+				output.write(deck.toString().getBytes());
+				output.close();
+			} catch (IOException e) {
+				e.printStackTrace(System.err);
+			}
+		}
+		
+		// TODO
+	}
+	
+	private void closeItemAction(ActionEvent event)
+	{
+		this.close();
+	}
+
+	public void close()
+	{
+		this.gui.dispose();
+	}
+
 	private void portraitMouseClicked(MouseEvent event)
 	{
 		Hero hero = this.deckModel.getHero();

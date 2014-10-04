@@ -19,41 +19,42 @@
             <items>
                   <MenuItem fx:id="newDeckItem" mnemonicParsing="false" text="New Deck..." />
                   <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Open Deck..." />
+                  <MenuItem mnemonicParsing="false" text="* Open Deck..." />
                   <Menu mnemonicParsing="false" text="Recenct Decks">
                     <items>
-                      <MenuItem mnemonicParsing="false" text="Deck 1" />
-                        <MenuItem mnemonicParsing="false" text="Deck 2" />
-                        <MenuItem mnemonicParsing="false" text="Deck 3" />
+                      <MenuItem mnemonicParsing="false" text="* Deck 1" />
+                        <MenuItem mnemonicParsing="false" text="* Deck 2" />
+                        <MenuItem mnemonicParsing="false" text="* Deck 3" />
                     </items>
                   </Menu>
                   <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Save" />
-                  <MenuItem mnemonicParsing="false" text="Save As..." />
+                  <MenuItem mnemonicParsing="false" text="* Save" />
+                  <MenuItem fx:id="saveAsItem" mnemonicParsing="false" text="Save As..." />
                   <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Export..." />
-                  <MenuItem mnemonicParsing="false" text="Import..." />
+                  <MenuItem mnemonicParsing="false" text="* Export..." />
+                  <MenuItem mnemonicParsing="false" text="* Import..." />
                   <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Delete" />
+                  <MenuItem mnemonicParsing="false" text="* Delete" />
                   <SeparatorMenuItem mnemonicParsing="false" />
-              <MenuItem mnemonicParsing="false" text="Close" />
+              <MenuItem fx:id="closeItem" mnemonicParsing="false" text="Close" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Deck">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Show History..." />
-                  <MenuItem mnemonicParsing="false" text="Rename..." />
-                  <MenuItem mnemonicParsing="false" text="Change Hero..." />
+                  <MenuItem mnemonicParsing="false" text="* Show History..." />
+                  <MenuItem mnemonicParsing="false" text="* Rename..." />
+                  <MenuItem mnemonicParsing="false" text="* Change Hero..." />
                </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Options">
               <items>
-                <MenuItem mnemonicParsing="false" text="Settings..." />
+                <MenuItem mnemonicParsing="false" text="* Settings..." />
               </items>
             </Menu>
           <Menu mnemonicParsing="false" text="Help">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+                  <MenuItem mnemonicParsing="false" text="* Send Feedback" />
+              <MenuItem mnemonicParsing="false" text="* About" />
             </items>
           </Menu>
         </menus>
