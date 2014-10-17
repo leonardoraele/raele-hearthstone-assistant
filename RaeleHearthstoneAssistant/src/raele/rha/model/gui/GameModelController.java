@@ -8,8 +8,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 
-import javax.imageio.ImageIO;
-
 import org.controlsfx.dialog.Dialogs;
 
 import raele.rha.model.CardlistEntry;
@@ -27,6 +25,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.text.Font;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -84,6 +83,7 @@ public class GameModelController {
 		this.cardlistCellfactory = new CardlistEntryCellFactory(this);
 		this.decklist.setCellFactory(this.cardlistCellfactory);
 		this.deckName.setOnMouseClicked(this::nameMouseClicked);
+		this.deckName.setFont(Font.loadFont("file:res/font/hearthstone.ttf", 18));
 		this.changeHeroButton.setOnMouseClicked(this::changeHeroMouseClicked);
 		
 		FXUtilities.hoverConfigOrHandle(this.changeHeroButton,
@@ -163,7 +163,7 @@ public class GameModelController {
 		try {
 			File file = new File("res/img/icon.png");
 			java.awt.Image icon;
-			icon = ImageIO.read(file);
+			icon = javax.imageio.ImageIO.read(file);
 			this.gui.setIconImage(icon);
 		} catch (IOException e) {
 			e.printStackTrace();
