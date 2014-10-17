@@ -85,15 +85,13 @@ public class GameModelController {
 		this.decklist.setCellFactory(this.cardlistCellfactory);
 		this.deckName.setOnMouseClicked(this::nameMouseClicked);
 		this.changeHeroButton.setOnMouseClicked(this::changeHeroMouseClicked);
-		try {
-			FXUtilities.hoverConfig(this.changeHeroButton,
-					"res/img/dropdown.png",
-					"res/img/dropdown_hover.png",
-					"res/img/dropdown_pressed.png"
-					);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		
+		FXUtilities.hoverConfigOrHandle(this.changeHeroButton,
+				"res/img/dropdown.png",
+				"res/img/dropdown_hover.png",
+				"res/img/dropdown_pressed.png",
+				e -> e.printStackTrace()
+				);
 	}
 
 	public void setup(GameModelGUI gui)

@@ -36,7 +36,7 @@
    <center>
       <BorderPane BorderPane.alignment="CENTER">
          <right>
-            <Label fx:id="quantity" text="2" BorderPane.alignment="CENTER">
+            <Label fx:id="quantity" text="2" textFill="#eeba29" BorderPane.alignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
@@ -48,14 +48,14 @@
          <left>
             <HBox alignment="CENTER_LEFT" spacing="4.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label fx:id="name" text="Card Name">
+                  <Label fx:id="name" text="Card Name" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                   <HBox alignment="CENTER_LEFT">
                      <children>
-                        <Label text="(">
+                        <Label text="(" textFill="WHITE">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -63,12 +63,12 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label fx:id="drawChance" text="16%">
+                        <Label fx:id="drawChance" text="16%" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label text=")">
+                        <Label text=")" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>

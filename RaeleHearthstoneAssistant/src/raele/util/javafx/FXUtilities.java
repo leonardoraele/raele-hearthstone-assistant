@@ -1,6 +1,7 @@
 package raele.util.javafx;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -19,12 +20,21 @@ import javafx.scene.image.ImageView;
  * 
  */
 public class FXUtilities {
+	
+	/**
+	 * Generic callback interface for dealing with events that don't have a
+	 * return, since javafx.util.Callback class doesn't support such behavior.
+	 *
+	 * @param <T> Parameter the callback expects to receive.
+	 */
+	public static interface VoidCallback<T> {
+		public void call(T t);
+	}
  
     /**
      * Simple helper class.
      * 
      * @author hendrikebbers
-     * 
      */
     private static class ThrowableWrapper {
         Throwable t;
@@ -102,14 +112,54 @@ public class FXUtilities {
     	
     }
     
-    public static void hoverConfig(ImageView view, String normal, String hover, String pressed)
-    throws IOException
+    public static void hoverConfigOrThrow(ImageView view, String normal,
+    		String hover, String pressed) throws IOException
     {
     	view.setOnMouseEntered(new ChangeImageHandler(view, hover));
     	view.setOnMouseExited(new ChangeImageHandler(view, normal));
     	
     	view.setOnMousePressed(new ChangeImageHandler(view, pressed));
     	view.setOnMouseReleased(new ChangeImageHandler(view, normal));
+    }
+    
+    public static void hoverConfigOrHandle(ImageView view, String normal,
+    		String hover, String pressed, VoidCallback<IOException> handler)
+    {
+    	try {
+    		view.setOnMouseEntered(new ChangeImageHandler(view, hover));
+    	} catch (IOException e) {
+    		handler.call(e);
+    	}
+    	
+    	try {
+    		view.setOnMouseExited(new ChangeImageHandler(view, normal));
+    	} catch (IOException e) {
+    		handler.call(e);
+    	}
+    	
+    	try {
+    		view.setOnMousePressed(new ChangeImageHandler(view, pressed));
+    	} catch (IOException e) {
+    		handler.call(e);
+    	}
+    	
+    	try {
+    		view.setOnMouseReleased(new ChangeImageHandler(view, normal));
+    	} catch (IOException e) {
+    		handler.call(e);
+    	}
+    }
+    
+    public static void hoverConfigOrUndo(ImageView view, String normal,
+    		String hover, String pressed)
+    {
+    	try {
+    		view.setOnMouseEntered(new ChangeImageHandler(view, hover));
+    		view.setOnMouseExited(new ChangeImageHandler(view, normal));
+    		
+    		view.setOnMousePressed(new ChangeImageHandler(view, pressed));
+    		view.setOnMouseReleased(new ChangeImageHandler(view, normal));
+    	} catch (IOException e) {}
     }
     
 }
