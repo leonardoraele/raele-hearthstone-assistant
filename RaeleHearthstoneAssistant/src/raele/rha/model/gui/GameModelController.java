@@ -8,6 +8,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 
+import javax.imageio.ImageIO;
+
 import org.controlsfx.dialog.Dialogs;
 
 import raele.rha.model.CardlistEntry;
@@ -69,7 +71,6 @@ public class GameModelController {
 	@FXML
 	public void initialize()
 	{
-		setupRecentDecks();
 		this.addButton.setOnAction(this::addButtonAction);
 		this.resetButton.setOnAction(this::resetButtonAction);
 		this.clearButton.setOnAction(this::clearButtonAction);
@@ -93,6 +94,16 @@ public class GameModelController {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public void setup(GameModelGUI gui)
+	{
+		this.gui = gui;
+		this.gameModel = gui.getModel();
+		this.deckModel = this.gameModel.getFriendlyDeck();
+		this.setupRecentDecks();
+		this.setupFrameIcon();
+		Platform.runLater(() -> this.loadDeck(this.deckModel.createDeck()));
 	}
 
 	private void setupRecentDecks()
@@ -139,7 +150,7 @@ public class GameModelController {
 		}
 	}
 	
-	public Void popupError(IOException e)
+	private Void popupError(IOException e)
 	{
 		e.printStackTrace();
 		Dialogs.create()
@@ -149,12 +160,16 @@ public class GameModelController {
 		return null;
 	}
 
-	public void setup(GameModelGUI gui)
+	private void setupFrameIcon()
 	{
-		this.gui = gui;
-		this.gameModel = gui.getModel();
-		this.deckModel = this.gameModel.getFriendlyDeck();
-		Platform.runLater(() -> this.loadDeck(this.deckModel.createDeck()));
+		try {
+			File file = new File("res/img/icon.png");
+			java.awt.Image icon;
+			icon = ImageIO.read(file);
+			this.gui.setIconImage(icon);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public GameModel getModel()

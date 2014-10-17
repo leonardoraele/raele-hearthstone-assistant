@@ -91,5 +91,5 @@ public class JFXFrame<GenericController> extends JFrame {
 	{
 		return this.parent;
 	}
-
+	
 }

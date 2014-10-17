@@ -1,15 +1,10 @@
 package raele.util.javafx;
+
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
- 
-
-
-
-
-
 
 import javafx.application.Platform;
 import javafx.event.Event;
@@ -116,4 +111,5 @@ public class FXUtilities {
     	view.setOnMousePressed(new ChangeImageHandler(view, pressed));
     	view.setOnMouseReleased(new ChangeImageHandler(view, normal));
     }
+    
 }
